@@ -17,6 +17,7 @@
 		B062C6F41E946C22006C3CB8 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C6F31E946C22006C3CB8 /* Response.swift */; };
 		B062C6F61E946C37006C3CB8 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C6F51E946C37006C3CB8 /* Result.swift */; };
 		B062C6F81E946C8A006C3CB8 /* DatabaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C6F71E946C8A006C3CB8 /* DatabaseProvider.swift */; };
+		B062C6FA1E946CED006C3CB8 /* StorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C6F91E946CED006C3CB8 /* StorageProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		B062C6F31E946C22006C3CB8 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		B062C6F51E946C37006C3CB8 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		B062C6F71E946C8A006C3CB8 /* DatabaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseProvider.swift; sourceTree = "<group>"; };
+		B062C6F91E946CED006C3CB8 /* StorageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				B062C6F51E946C37006C3CB8 /* Result.swift */,
 				B062C6D31E946B59006C3CB8 /* Info.plist */,
 				B062C6F71E946C8A006C3CB8 /* DatabaseProvider.swift */,
+				B062C6F91E946CED006C3CB8 /* StorageProvider.swift */,
 			);
 			path = Nora;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B062C6FA1E946CED006C3CB8 /* StorageProvider.swift in Sources */,
 				B062C6EE1E946BD5006C3CB8 /* FirebaseError.swift in Sources */,
 				B062C6F81E946C8A006C3CB8 /* DatabaseProvider.swift in Sources */,
 				B062C6F01E946BF1006C3CB8 /* FirebaseTask.swift in Sources */,
