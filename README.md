@@ -1,5 +1,7 @@
 # Nora
 
+![Nora](https://github.com/SD10/Nora/blob/master/NoraBanner.png)
+
 Nora is a Firebase abstraction layer for working with FirebaseDatabase and FirebaseStorage.
 
 You shouldn't have to spend all your time cleaning up your view controllers and trying to write reusable Firebase code. 
