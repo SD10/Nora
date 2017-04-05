@@ -21,13 +21,13 @@ You just have to download Nora, drag the `Sources` folder into your project, and
 
 Click Download Zip to download the Nora project
 
-[Image]
+![Step 1](https://github.com/SD10/Nora/blob/master/Screen%20Shot%202017-04-05%20at%204.07.48%20AM.png)
 
 ### Step 2
 
 Open the Nora.xcodeproj project and drag the `Sources` folder into your App
 
-[Image]
+![Step 2](https://github.com/SD10/Nora/blob/master/Screen%20Shot%202017-04-05%20at%204.10.29%20AM.png)
 
 ### Step 3
 
