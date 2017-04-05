@@ -19,6 +19,7 @@
 		B062C6FE1E946D74006C3CB8 /* FirebaseTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C6FD1E946D74006C3CB8 /* FirebaseTask.swift */; };
 		B062C7001E946DB4006C3CB8 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C6FF1E946DB4006C3CB8 /* Request.swift */; };
 		B062C7021E946E0F006C3CB8 /* DatabaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C7011E946E0F006C3CB8 /* DatabaseResponse.swift */; };
+		B062C7041E946E81006C3CB8 /* StorageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C7031E946E81006C3CB8 /* StorageResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		B062C6FD1E946D74006C3CB8 /* FirebaseTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseTask.swift; sourceTree = "<group>"; };
 		B062C6FF1E946DB4006C3CB8 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		B062C7011E946E0F006C3CB8 /* DatabaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseResponse.swift; sourceTree = "<group>"; };
+		B062C7031E946E81006C3CB8 /* StorageResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				B062C6FD1E946D74006C3CB8 /* FirebaseTask.swift */,
 				B062C6FF1E946DB4006C3CB8 /* Request.swift */,
 				B062C7011E946E0F006C3CB8 /* DatabaseResponse.swift */,
+				B062C7031E946E81006C3CB8 /* StorageResponse.swift */,
 			);
 			path = Nora;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				B062C6F81E946C8A006C3CB8 /* DatabaseProvider.swift in Sources */,
 				B062C7021E946E0F006C3CB8 /* DatabaseResponse.swift in Sources */,
 				B062C6F61E946C37006C3CB8 /* Result.swift in Sources */,
+				B062C7041E946E81006C3CB8 /* StorageResponse.swift in Sources */,
 				B062C6F21E946C0C006C3CB8 /* DatabaseRequest.swift in Sources */,
 				B062C7001E946DB4006C3CB8 /* Request.swift in Sources */,
 				B062C6FC1E946D27006C3CB8 /* FirebaseTarget.swift in Sources */,
