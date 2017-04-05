@@ -1,6 +1,5 @@
 # Nora
-
-![Nora](https://github.com/SD10/Nora/blob/master/NoraBanner.png)
+![Nora](https://github.com/SD10/Nora/blob/master/Screenshots/NoraBanner.png)
 
 ---
 
@@ -27,7 +26,7 @@ You just have to download Nora, drag the `Sources` folder into your project, and
 
 Click Download Zip to download the Nora project
 
-![Step 1](https://github.com/SD10/Nora/blob/master/Screen%20Shot%202017-04-05%20at%204.07.48%20AM.png)
+![Step 1](https://github.com/SD10/Nora/blob/master/Screenshots/Screen%20Shot%202017-04-05%20at%204.07.48%20AM.png)
 
 ---
 
@@ -35,7 +34,7 @@ Click Download Zip to download the Nora project
 
 Open the Nora.xcodeproj project and drag the `Sources` folder into your App
 
-![Step 2](https://github.com/SD10/Nora/blob/master/Screen%20Shot%202017-04-05%20at%204.10.29%20AM.png)
+![Step 2](https://github.com/SD10/Nora/blob/master/Screenshots/Screen%20Shot%202017-04-05%20at%204.10.29%20AM.png)
 
 ---
 
