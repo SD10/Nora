@@ -2,14 +2,17 @@
 //  FirebaseTarget.swift
 //  Nora
 //
-//  Created by Steven Deutsch on 4/3/17.
-//  Copyright © 2017 Nora. All rights reserved.
+//  Created by Steven on 4/4/17.
+//  Copyright © 2017 NoraFirebase. All rights reserved.
 //
 
 import Foundation
 import FirebaseDatabase
+import FirebaseStorage
 
-public protocol FirebaseTarget {
+// MARK: - DatabaseTarget
+
+public protocol DatabaseTarget {
     
     /// Base reference for your target in Database
     var baseReference: FIRDatabaseReference { get }
@@ -18,7 +21,7 @@ public protocol FirebaseTarget {
     var path: String { get }
     
     /// Type of task you want to perform ( Firebase method: eg. observe, observeOnce, setValue, etc. )
-    var task: FirebaseTask { get }
+    var task: DatabaseTask { get }
     
     /// Values to write for a upload request
     var parameters: [String: Any]? { get }
@@ -34,7 +37,7 @@ public protocol FirebaseTarget {
     
 }
 
-public extension FirebaseTarget {
+public extension DatabaseTarget {
     
     /// Should task be performed on disconnect ( Defaults to false )
     var onDisconnect: Bool {
@@ -52,4 +55,19 @@ public extension FirebaseTarget {
             return FIRTransactionResult.success(withValue: data)
         }
     }
+}
+
+// MARK: - StorageTarget
+
+protocol StorageTarget {
+    
+    /// Base reference for your target in Storage
+    var baseReference: FIRStorageReference { get }
+    
+    /// Path to be appended to the base reference
+    var path: String { get }
+    
+    /// Type of task you want to perform ( Firebase storage method: eg. put, putFile, write, delete )
+    var task: StorageTask { get }
+    
 }
