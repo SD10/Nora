@@ -13,6 +13,7 @@
 		B062C6EA1E946B89006C3CB8 /* FirebaseTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C6E91E946B89006C3CB8 /* FirebaseTarget.swift */; };
 		B062C6EC1E946BBA006C3CB8 /* FirebaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C6EB1E946BBA006C3CB8 /* FirebaseProvider.swift */; };
 		B062C6EE1E946BD5006C3CB8 /* FirebaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C6ED1E946BD5006C3CB8 /* FirebaseError.swift */; };
+		B062C6F01E946BF1006C3CB8 /* FirebaseTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C6EF1E946BF1006C3CB8 /* FirebaseTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		B062C6E91E946B89006C3CB8 /* FirebaseTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseTarget.swift; sourceTree = "<group>"; };
 		B062C6EB1E946BBA006C3CB8 /* FirebaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseProvider.swift; sourceTree = "<group>"; };
 		B062C6ED1E946BD5006C3CB8 /* FirebaseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseError.swift; sourceTree = "<group>"; };
+		B062C6EF1E946BF1006C3CB8 /* FirebaseTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				B062C6E91E946B89006C3CB8 /* FirebaseTarget.swift */,
 				B062C6EB1E946BBA006C3CB8 /* FirebaseProvider.swift */,
 				B062C6ED1E946BD5006C3CB8 /* FirebaseError.swift */,
+				B062C6EF1E946BF1006C3CB8 /* FirebaseTask.swift */,
 				B062C6D31E946B59006C3CB8 /* Info.plist */,
 			);
 			path = Nora;
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B062C6EE1E946BD5006C3CB8 /* FirebaseError.swift in Sources */,
+				B062C6F01E946BF1006C3CB8 /* FirebaseTask.swift in Sources */,
 				B062C6EA1E946B89006C3CB8 /* FirebaseTarget.swift in Sources */,
 				B062C6EC1E946BBA006C3CB8 /* FirebaseProvider.swift in Sources */,
 			);
