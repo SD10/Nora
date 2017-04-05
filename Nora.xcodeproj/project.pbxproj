@@ -90,16 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				B062C6D21E946B59006C3CB8 /* Nora.h */,
+				B062C7091E947363006C3CB8 /* Sources */,
 				B062C6D31E946B59006C3CB8 /* Info.plist */,
-				B062C6F71E946C8A006C3CB8 /* DatabaseProvider.swift */,
-				B062C6F91E946CED006C3CB8 /* StorageProvider.swift */,
-				B062C6FB1E946D27006C3CB8 /* FirebaseTarget.swift */,
-				B062C6FD1E946D74006C3CB8 /* FirebaseTask.swift */,
-				B062C6FF1E946DB4006C3CB8 /* Request.swift */,
-				B062C7011E946E0F006C3CB8 /* DatabaseResponse.swift */,
-				B062C7031E946E81006C3CB8 /* StorageResponse.swift */,
-				B062C7051E946EBD006C3CB8 /* Result.swift */,
-				B062C7071E946EE0006C3CB8 /* NoraError.swift */,
 			);
 			path = Nora;
 			sourceTree = "<group>";
@@ -111,6 +103,22 @@
 				B062C6DF1E946B59006C3CB8 /* Info.plist */,
 			);
 			path = NoraTests;
+			sourceTree = "<group>";
+		};
+		B062C7091E947363006C3CB8 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B062C6F71E946C8A006C3CB8 /* DatabaseProvider.swift */,
+				B062C6F91E946CED006C3CB8 /* StorageProvider.swift */,
+				B062C6FB1E946D27006C3CB8 /* FirebaseTarget.swift */,
+				B062C6FD1E946D74006C3CB8 /* FirebaseTask.swift */,
+				B062C6FF1E946DB4006C3CB8 /* Request.swift */,
+				B062C7011E946E0F006C3CB8 /* DatabaseResponse.swift */,
+				B062C7031E946E81006C3CB8 /* StorageResponse.swift */,
+				B062C7051E946EBD006C3CB8 /* Result.swift */,
+				B062C7071E946EE0006C3CB8 /* NoraError.swift */,
+			);
+			name = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
