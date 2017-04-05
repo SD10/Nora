@@ -10,6 +10,7 @@
 		B062C6D91E946B59006C3CB8 /* Nora.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B062C6CF1E946B59006C3CB8 /* Nora.framework */; };
 		B062C6DE1E946B59006C3CB8 /* NoraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C6DD1E946B59006C3CB8 /* NoraTests.swift */; };
 		B062C6E01E946B59006C3CB8 /* Nora.h in Headers */ = {isa = PBXBuildFile; fileRef = B062C6D21E946B59006C3CB8 /* Nora.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B062C6EA1E946B89006C3CB8 /* FirebaseTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C6E91E946B89006C3CB8 /* FirebaseTarget.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		B062C6D81E946B59006C3CB8 /* NoraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B062C6DD1E946B59006C3CB8 /* NoraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoraTests.swift; sourceTree = "<group>"; };
 		B062C6DF1E946B59006C3CB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B062C6E91E946B89006C3CB8 /* FirebaseTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseTarget.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				B062C6D21E946B59006C3CB8 /* Nora.h */,
+				B062C6E91E946B89006C3CB8 /* FirebaseTarget.swift */,
 				B062C6D31E946B59006C3CB8 /* Info.plist */,
 			);
 			path = Nora;
@@ -149,6 +152,7 @@
 					B062C6CE1E946B59006C3CB8 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 3KD7B39L8W;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					B062C6D71E946B59006C3CB8 = {
@@ -198,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B062C6EA1E946B89006C3CB8 /* FirebaseTarget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +327,7 @@
 		B062C6E41E946B59006C3CB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3KD7B39L8W;
@@ -334,6 +340,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.norafirebase.Nora;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,6 +348,7 @@
 		B062C6E51E946B59006C3CB8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3KD7B39L8W;
@@ -360,6 +368,7 @@
 		B062C6E71E946B59006C3CB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 3KD7B39L8W;
 				INFOPLIST_FILE = NoraTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -372,6 +381,7 @@
 		B062C6E81E946B59006C3CB8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 3KD7B39L8W;
 				INFOPLIST_FILE = NoraTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
