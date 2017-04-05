@@ -1,22 +1,22 @@
 //
-//  FirebaseProvider.swift
+//  DatabaseProvider.swift
 //  Nora
 //
-//  Created by Steven Deutsch on 4/3/17.
-//  Copyright © 2017 Nora. All rights reserved.
+//  Created by Steven on 4/4/17.
+//  Copyright © 2017 NoraFirebase. All rights reserved.
 //
 
 import Foundation
 import FirebaseDatabase
 
-public typealias FirebaseCompletion = (Result<Response>) -> Void
+public typealias DatabaseCompletion = (Result<DatabaseResponse>) -> Void
 public typealias TransactionBlock = (FIRMutableData) -> FIRTransactionResult
 public typealias JSON = [String: Any]
 
-public class FirebaseProvider<Target: FirebaseTarget> {
+public class DatabaseProvider<Target: DatabaseTarget> {
     
     @discardableResult
-    public func request(_ target: Target, completion: @escaping FirebaseCompletion) -> UInt? {
+    public func request(_ target: Target, completion: @escaping DatabaseCompletion) -> UInt? {
         
         var handle: UInt?
         let request = DatabaseRequest(target)
@@ -32,7 +32,7 @@ public class FirebaseProvider<Target: FirebaseTarget> {
         return handle
     }
     
-    func processObserve(_ request: DatabaseRequest, _ completion: @escaping FirebaseCompletion) -> UInt? {
+    private func processObserve(_ request: DatabaseRequest, _ completion: @escaping DatabaseCompletion) -> UInt? {
         
         let successMapping = { (snapshot: FIRDataSnapshot) in
             let result = self.convertResponseToResult(snapshot: snapshot, reference: request.reference, error: nil)
@@ -52,13 +52,13 @@ public class FirebaseProvider<Target: FirebaseTarget> {
         case .observeOnce(let event):
             request.reference.observeSingleEvent(of: event, with: successMapping, withCancel: failureMapping)
         default:
-            completion(.failure(FirebaseError.requestMapping))
+            completion(.failure(NoraError.requestMapping))
         }
         
         return handle
     }
     
-    func processWrite(_ request: DatabaseRequest, _ completion: @escaping FirebaseCompletion) {
+    private func processWrite(_ request: DatabaseRequest, _ completion: @escaping DatabaseCompletion) {
         
         let completionBlock = { (error: Error?, reference: FIRDatabaseReference) in
             let result = self.convertResponseToResult(snapshot: nil, reference: reference, error: error)
@@ -77,7 +77,7 @@ public class FirebaseProvider<Target: FirebaseTarget> {
         case .updateChildValues:
             
             guard let values = request.parameters else {
-                completion(.failure(FirebaseError.invalidParameters))
+                completion(.failure(NoraError.invalidParameters))
                 break
             }
             
@@ -96,11 +96,11 @@ public class FirebaseProvider<Target: FirebaseTarget> {
             }
             
         default:
-            completion(.failure(FirebaseError.requestMapping))
+            completion(.failure(NoraError.requestMapping))
         }
     }
     
-    func processTransaction(_ request: DatabaseRequest, _ completion: @escaping FirebaseCompletion) {
+    private func processTransaction(_ request: DatabaseRequest, _ completion: @escaping DatabaseCompletion) {
         
         let transactionCompletion = { (error: Error?, committed: Bool, snapshot: FIRDataSnapshot?) in
             let result = self.convertResponseToResult(snapshot: snapshot, reference: request.reference, error: error, committed: committed)
@@ -111,28 +111,26 @@ public class FirebaseProvider<Target: FirebaseTarget> {
     }
 }
 
-private extension FirebaseProvider {
+private extension DatabaseProvider {
     
     
-    func convertResponseToResult(snapshot: FIRDataSnapshot?, reference: FIRDatabaseReference?, error: Error?, committed: Bool? = nil) -> Result<Response> {
+    func convertResponseToResult(snapshot: FIRDataSnapshot?, reference: FIRDatabaseReference?, error: Error?, committed: Bool? = nil) -> Result<DatabaseResponse> {
         
         switch (snapshot, reference, error, committed) {
         case let (snapshot, .some(reference), .none, .some(committed)):
-            let response = Response(reference: reference, snapshot: snapshot, isCommitted: committed)
+            let response = DatabaseResponse(reference: reference, snapshot: snapshot, isCommitted: committed)
             return .success(response)
         case let (.some(snapshot), .some(reference), .none, _):
-            let response = Response(reference: reference, snapshot: snapshot, isCommitted: true)
-            return snapshot.exists() ? .success(response) : .failure(FirebaseError.nullSnapshot)
+            let response = DatabaseResponse(reference: reference, snapshot: snapshot, isCommitted: true)
+            return snapshot.exists() ? .success(response) : .failure(NoraError.nullSnapshot)
         case let (.none, .some(reference), .none, _):
-            let response = Response(reference: reference, isCommitted: true)
+            let response = DatabaseResponse(reference: reference, isCommitted: true)
             return .success(response)
         case let (.none, _, .some(error), _):
-            return .failure(FirebaseError.underlying(error))
+            return .failure(NoraError.underlying(error))
         default:
-            return .failure(FirebaseError.resultConversion)
+            return .failure(NoraError.resultConversion)
         }
     }
     
 }
-
-
