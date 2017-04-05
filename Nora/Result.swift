@@ -1,9 +1,9 @@
 //
 //  Result.swift
-//  ProjectX
+//  Nora
 //
-//  Created by Steven Deutsch on 4/3/17.
-//  Copyright © 2017 ProjectX. All rights reserved.
+//  Created by Steven on 4/4/17.
+//  Copyright © 2017 NoraFirebase. All rights reserved.
 //
 
 import Foundation
@@ -15,8 +15,8 @@ public enum Result<Value> {
     case failure(Error?)
 }
 
-extension Result {
-
+public extension Result {
+    
     init(value: Value) {
         self = .success(value)
     }
@@ -24,5 +24,5 @@ extension Result {
     init(error: Error?) {
         self = .failure(error)
     }
-
+    
 }
