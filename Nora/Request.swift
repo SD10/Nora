@@ -12,7 +12,7 @@ import FirebaseStorage
 
 // MARK: - DatabaseRequest
 
-internal struct DatabaseRequest {
+struct DatabaseRequest {
     
     var reference: FIRDatabaseReference
     var task: DatabaseTask
@@ -23,7 +23,7 @@ internal struct DatabaseRequest {
     
 }
 
-internal extension DatabaseRequest {
+extension DatabaseRequest {
     
     init(_ target: DatabaseTarget) {
         self.reference = target.baseReference.child(target.path)
@@ -38,14 +38,14 @@ internal extension DatabaseRequest {
 
 // MARK: - StorageRequest
 
-internal struct StorageRequest {
+struct StorageRequest {
     
     let reference: FIRStorageReference
     let task: StorageTask
     
 }
 
-internal extension StorageRequest {
+extension StorageRequest {
     
     init(_ target: StorageTarget) {
         self.reference = target.baseReference.child(target.path)

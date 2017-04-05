@@ -9,7 +9,7 @@
 import Foundation
 import FirebaseStorage
 
-typealias StorageCompletion = (Result<StorageResponse>) -> Void
+public typealias StorageCompletion = (Result<StorageResponse>) -> Void
 
 public class StorageProvider<Target: StorageTarget> {
     
@@ -89,7 +89,7 @@ public class StorageProvider<Target: StorageTarget> {
 
 private extension StorageProvider {
 
-    private func convertResponseToResult(data: Data?, metaData: FIRStorageMetadata?, url: URL?, error: Error?) -> Result<StorageResponse> {
+    func convertResponseToResult(data: Data?, metaData: FIRStorageMetadata?, url: URL?, error: Error?) -> Result<StorageResponse> {
         
         switch (data, metaData, url, error) {
         case let (.some(data), _, _, .none):

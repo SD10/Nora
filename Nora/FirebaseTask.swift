@@ -27,7 +27,7 @@ public enum DatabaseTask {
 // MARK: - StorageTask
 
 /// Represents the read/write methods of FirebaseStorage
-enum StorageTask {
+public enum StorageTask {
     
     case upload(Data, FIRStorageMetadata?) // put
     case uploadFile(to: URL, FIRStorageMetadata?) // putFile

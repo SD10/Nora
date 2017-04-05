@@ -9,22 +9,6 @@
 import Foundation
 import FirebaseDatabase
 
-// MARK: - JSONDecodeable
-
-public protocol JSONDecodeable {
-    
-    init?(json: JSON)
-    
-}
-
-// MARK: - SnapshotDecodeable
-
-public protocol SnapshotDecodeable {
-    
-    init?(snapshot: FIRDataSnapshot)
-    
-}
-
 // MARK: - DatabaseResponse
 
 

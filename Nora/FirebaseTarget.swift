@@ -59,7 +59,7 @@ public extension DatabaseTarget {
 
 // MARK: - StorageTarget
 
-protocol StorageTarget {
+public protocol StorageTarget {
     
     /// Base reference for your target in Storage
     var baseReference: FIRStorageReference { get }

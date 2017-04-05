@@ -1,5 +1,6 @@
 # Nora
-![Nora](https://github.com/SD10/Nora/blob/master/Screenshots/NoraBanner.png)
+
+![Nora](https://github.com/SD10/Nora/blob/master/NoraBanner.png)
 
 ---
 
@@ -26,7 +27,7 @@ You just have to download Nora, drag the `Sources` folder into your project, and
 
 Click Download Zip to download the Nora project
 
-![Step 1](https://github.com/SD10/Nora/blob/master/Screenshots/Screen%20Shot%202017-04-05%20at%204.07.48%20AM.png)
+![Step 1](https://github.com/SD10/Nora/blob/master/Screen%20Shot%202017-04-05%20at%204.07.48%20AM.png)
 
 ---
 
@@ -34,7 +35,7 @@ Click Download Zip to download the Nora project
 
 Open the Nora.xcodeproj project and drag the `Sources` folder into your App
 
-![Step 2](https://github.com/SD10/Nora/blob/master/Screenshots/Screen%20Shot%202017-04-05%20at%204.10.29%20AM.png)
+![Step 2](https://github.com/SD10/Nora/blob/master/Screen%20Shot%202017-04-05%20at%204.10.29%20AM.png)
 
 ---
 
@@ -44,9 +45,9 @@ Download Nora's dependencies using Cocoapods. Add them to your podfile
 
 ```rb
 
-pod `FirebaseDatabase`
+pod 'FirebaseDatabase', '~>3.1.1'
 
-pod `FirebaseStorage`
+pod 'FirebaseStorage', '~>1.0.5'
 
 ```
 
@@ -116,6 +117,25 @@ Your feedback is always welcome and much appreciated!
 REGARDLESS, of your level of experience.
 
 You will never be put down for having an opinion. So take a chance, open a pull request, or submit that issue!
+
+---
+
+## Inspiration
+
+This project was inspired and based off the [Moya](https://github.com/Moya/Moya) networking abstraction layer in Swift.
+
+Check out their project if you're using traditional networking!
+
+---
+
+## License
+
+Nora is released under an MIT license. See [LICENSE.md](https://github.com/SD10/Nora/blob/master/LICENSE.md) for more information.
+
+
+
+
+
 
 
 
