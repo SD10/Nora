@@ -43,7 +43,7 @@ enum Users: DatabaseTarget {
 		case .deleteUser:
 			return .removeValue
 		case .addFriend:
-			return .setVa
+			return .setValue
 		}
 
 	}
