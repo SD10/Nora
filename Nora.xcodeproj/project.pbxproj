@@ -20,6 +20,7 @@
 		B062C7021E946E0F006C3CB8 /* DatabaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C7011E946E0F006C3CB8 /* DatabaseResponse.swift */; };
 		B062C7041E946E81006C3CB8 /* StorageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C7031E946E81006C3CB8 /* StorageResponse.swift */; };
 		B062C7061E946EBD006C3CB8 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C7051E946EBD006C3CB8 /* Result.swift */; };
+		B062C7081E946EE0006C3CB8 /* NoraError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C7071E946EE0006C3CB8 /* NoraError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		B062C7011E946E0F006C3CB8 /* DatabaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseResponse.swift; sourceTree = "<group>"; };
 		B062C7031E946E81006C3CB8 /* StorageResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageResponse.swift; sourceTree = "<group>"; };
 		B062C7051E946EBD006C3CB8 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		B062C7071E946EE0006C3CB8 /* NoraError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoraError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				B062C7011E946E0F006C3CB8 /* DatabaseResponse.swift */,
 				B062C7031E946E81006C3CB8 /* StorageResponse.swift */,
 				B062C7051E946EBD006C3CB8 /* Result.swift */,
+				B062C7071E946EE0006C3CB8 /* NoraError.swift */,
 			);
 			path = Nora;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			files = (
 				B062C6FA1E946CED006C3CB8 /* StorageProvider.swift in Sources */,
 				B062C6FE1E946D74006C3CB8 /* FirebaseTask.swift in Sources */,
+				B062C7081E946EE0006C3CB8 /* NoraError.swift in Sources */,
 				B062C6EE1E946BD5006C3CB8 /* FirebaseError.swift in Sources */,
 				B062C6F81E946C8A006C3CB8 /* DatabaseProvider.swift in Sources */,
 				B062C7021E946E0F006C3CB8 /* DatabaseResponse.swift in Sources */,
