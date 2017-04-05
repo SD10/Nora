@@ -19,7 +19,7 @@ public struct StorageResponse {
 }
 
 
-extension StorageResponse {
+public extension StorageResponse {
     
     init(data: Data) {
         self.data = data
