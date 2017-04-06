@@ -61,7 +61,7 @@ And that's it!
 
 ### Working with FirebaseDatabase
 
-After [setting up a target](https://github.com/SD10/Nora/blob/master/Examples/DatabaseProvider.md) making requests is simple.
+After [setting up a target](https://github.com/SD10/Nora/blob/master/DatabaseProvider.md) making requests is simple.
 
 ```swift
 
