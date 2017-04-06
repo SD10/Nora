@@ -66,20 +66,15 @@ public class DatabaseProvider<Target: DatabaseTarget> {
         }
         
         switch request.task {
-        case .setValue:
+        case .setValue(let value):
             
             if request.onDisconnect {
-                request.reference.onDisconnectSetValue(request.parameters, withCompletionBlock: completionBlock)
+                request.reference.onDisconnectSetValue(value, withCompletionBlock: completionBlock)
             } else {
-                request.reference.setValue(request.parameters, withCompletionBlock: completionBlock)
+                request.reference.setValue(value, withCompletionBlock: completionBlock)
             }
             
-        case .updateChildValues:
-            
-            guard let values = request.parameters else {
-                completion(.failure(NoraError.invalidParameters))
-                break
-            }
+        case .updateChildValues(let values):
             
             if request.onDisconnect {
                 request.reference.onDisconnectUpdateChildValues(values, withCompletionBlock: completionBlock)
@@ -122,7 +117,7 @@ private extension DatabaseProvider {
             return .success(response)
         case let (.some(snapshot), .some(reference), .none, _):
             let response = DatabaseResponse(reference: reference, snapshot: snapshot, isCommitted: true)
-            return snapshot.exists() ? .success(response) : .failure(NoraError.nullSnapshot)
+            return .success(response)
         case let (.none, .some(reference), .none, _):
             let response = DatabaseResponse(reference: reference, isCommitted: true)
             return .success(response)

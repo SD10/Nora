@@ -11,11 +11,7 @@ import Foundation
 // MARK: - NoraError
 
 public enum NoraError: Error {
-    case nullSnapshot
-    case invalidParameters
     case resultConversion
     case requestMapping
-    case jsonMapping
-    case objectDecoding
     case underlying(Error)
 }

@@ -12,7 +12,7 @@ import Foundation
 
 public enum Result<Value> {
     case success(Value)
-    case failure(Error?)
+    case failure(Error)
 }
 
 public extension Result {
@@ -21,7 +21,7 @@ public extension Result {
         self = .success(value)
     }
     
-    init(error: Error?) {
+    init(error: Error) {
         self = .failure(error)
     }
     
