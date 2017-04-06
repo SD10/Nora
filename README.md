@@ -2,15 +2,19 @@
 
 ![Nora](https://github.com/SD10/Nora/blob/master/Screenshots/NoraBanner.png)
 
+
+[![Build Status](https://travis-ci.org/SD10/Nora.svg?branch=master)](https://travis-ci.org/SD10/Nora)
+[![Swift](https://img.shields.io/badge/Swift-3.1-orange.svg)](https://swift.org)
+[![Xcode](https://img.shields.io/badge/Xcode-8.3-blue.svg)](https://developer.apple.com/xcode)
+[![MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/SD10/Nora/issues)
-[![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 
 ---
 
 Nora is a Firebase abstraction layer for working with FirebaseDatabase and FirebaseStorage.
 
-You shouldn't have to spend all your time cleaning up your view controllers and trying to write reusable Firebase code. 
+You shouldn't have to spend all your time cleaning up your view controllers and trying to write reusable Firebase code.
 Let Nora handle that for you. Your time is better spent on what you do best. Writing great Apps!
 
 Simply put, working with Firebase just got whole lot easier.
@@ -93,7 +97,7 @@ let storage = StorageProvider<Avatars>()
 let avatarData = Data()
 var meta = FIRStorageMetadata?
 
-storage.request(.upload(avatarData, meta)) { result in 
+storage.request(.upload(avatarData, meta)) { result in
 	switch result {
 	case .success(_):
 		print("Nora: Upload Success!")
@@ -116,7 +120,7 @@ You can contribute to this project in more ways than just code:
 - New feature suggestions
 - Answering questions
 
-We really encourage everyone to get involved in open source. 
+We really encourage everyone to get involved in open source.
 
 Your feedback is always welcome and much appreciated!
 
@@ -137,12 +141,3 @@ Check out their project if you're using traditional networking!
 ## License
 
 Nora is released under an MIT license. See [LICENSE.md](https://github.com/SD10/Nora/blob/master/LICENSE.md) for more information.
-
-
-
-
-
-
-
-
-
