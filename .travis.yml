@@ -1,6 +1,5 @@
-osx_image: xcode8
+osx_image: xcode8.3
 language: objective-c
 before_install:
     - gem install xcpretty
-script:
-    - xcodebuild build -project Nora.xcodeproj -scheme Nora -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=latest'
+script: sh build.sh /tmp/Nora
