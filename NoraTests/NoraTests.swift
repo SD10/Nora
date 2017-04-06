@@ -2,12 +2,11 @@
 //  NoraTests.swift
 //  NoraTests
 //
-//  Created by Steven on 4/4/17.
+//  Created by Steven on 4/6/17.
 //  Copyright © 2017 NoraFirebase. All rights reserved.
 //
 
 import XCTest
-@testable import Nora
 
 class NoraTests: XCTestCase {
     
