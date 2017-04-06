@@ -3,4 +3,4 @@ language: objective-c
 before_install:
     - gem install xcpretty
 script:
-    - xcode build -project Nora.xcodeproj
+    - xcodebuild build -project Nora.xcodeproj -scheme Nora -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=latest'
