@@ -26,14 +26,13 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0748B23C1E96AC060003467C"
+               BlueprintIdentifier = "07E5542C1E96B33C00D81D9B"
                BuildableName = "NoraTests.xctest"
                BlueprintName = "NoraTests"
                ReferencedContainer = "container:Nora.xcodeproj">
