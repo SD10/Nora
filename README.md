@@ -19,7 +19,7 @@ Simply put, working with Firebase just got whole lot easier.
 
 ## Installation
 
-Firebase is currently shipped as a static framework - which prevents Nora from having Cocoapods support.
+Firebase is currently shipped as a static framework - which prevents Nora from having CocoaPods support.
 
 Don't fret though! This just means the installation process is even simpler!
 
@@ -45,7 +45,7 @@ Open the Nora.xcodeproj project and drag the `Sources` folder into your App
 
 ### Step 3
 
-Download Nora's dependencies using Cocoapods. Add them to your podfile
+Download Nora's dependencies using CocoaPods. Add them to your podfile
 
 ```rb
 
