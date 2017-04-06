@@ -1,14 +1,33 @@
-# Nora
-
-![Nora](https://github.com/SD10/Nora/blob/master/Screenshots/NoraBanner.png)
-
-
-[![Build Status](https://travis-ci.org/SD10/Nora.svg?branch=master)](https://travis-ci.org/SD10/Nora)
-[![Swift](https://img.shields.io/badge/Swift-3.1-orange.svg)](https://swift.org)
-[![Xcode](https://img.shields.io/badge/Xcode-8.3-blue.svg)](https://developer.apple.com/xcode)
-[![MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/SD10/Nora/issues)
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+<p align="center">
+   <img src="https://github.com/SD10/Nora/blob/master/Screenshots/NoraBanner.png"/>
+ </p>
+ 
+ <p align="center">
+     <a href="https://travis-ci.org/SD10/Nora">
+         <img src="https://travis-ci.org/SD10/Nora.svg?branch=master"
+              alt="Build Status">
+     </a>
+     <a href="https://swift.org">
+       <img src="https://img.shields.io/badge/Swift-3.1-orange.svg"
+            alt="Swift" />
+     </a>
+     <a href="https://developer.apple.com/xcode">
+         <img src="https://img.shields.io/badge/Xcode-8.3-blue.svg"
+              alt="Xcode">
+     </a>
+     <a href="https://opensource.org/licenses/MIT">
+         <img src="https://img.shields.io/badge/License-MIT-red.svg"
+              alt="MIT">
+     </a>
+     <a href="https://github.com/SD10/Nora/issues">
+         <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"
+              alt="Contributions Welcome">
+     </a>
+     <a href="https://github.com/ellerbrock/open-source-badge/">
+         <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=102"
+              alt="Open Source Love">
+     </a>
+ </p>
 
 ---
 
