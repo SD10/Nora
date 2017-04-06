@@ -7,7 +7,7 @@ echo "Derived data location: $DERIVED_DATA";
 set -o pipefail &&
 rm -rf $DERIVED_DATA &&
 time xcodebuild clean test \
-    -project Nora.xcworkspace \
+    -workspace Nora.xcworkspace \
     -scheme 'Nora' \
     -sdk iphonesimulator10.3 \
     -derivedDataPath $DERIVED_DATA \
