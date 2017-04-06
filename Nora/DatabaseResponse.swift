@@ -11,7 +11,6 @@ import FirebaseDatabase
 
 // MARK: - DatabaseResponse
 
-
 public struct DatabaseResponse {
     
     public let snapshot: FIRDataSnapshot?

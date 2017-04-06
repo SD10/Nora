@@ -23,9 +23,6 @@ public protocol DatabaseTarget {
     /// Type of task you want to perform ( Firebase method: eg. observe, observeOnce, setValue, etc. )
     var task: DatabaseTask { get }
     
-    /// Values to write for a upload request
-    var parameters: [String: Any]? { get }
-    
     /// Transaction block to run for .transaction task ( Defaults to FIRTransactionResult.success(withValue: FIRMutableData) )
     var transactionBlock: (FIRMutableData) -> FIRTransactionResult { get }
     
@@ -70,4 +67,17 @@ public protocol StorageTarget {
     /// Type of task you want to perform ( Firebase storage method: eg. put, putFile, write, delete )
     var task: StorageTask { get }
     
+}
+
+// MARK: - FirebaseTarget
+
+public protocol FirebaseTarget {}
+
+public extension FirebaseTarget {
+
+    /// Generate unique id String
+    func uniqueID() -> String {
+        return UUID().uuidString.lowercased()
+    }
+
 }

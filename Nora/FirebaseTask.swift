@@ -17,8 +17,8 @@ public enum DatabaseTask {
     
     case observe(FIRDataEventType)
     case observeOnce(FIRDataEventType)
-    case setValue
-    case updateChildValues
+    case setValue(Any?)
+    case updateChildValues([AnyHashable: Any])
     case removeValue
     case transaction
     
