@@ -2,6 +2,10 @@
 
 ![Nora](https://github.com/SD10/Nora/blob/master/Screenshots/NoraBanner.png)
 
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/SD10/Nora/issues)
+[![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+
 ---
 
 Nora is a Firebase abstraction layer for working with FirebaseDatabase and FirebaseStorage.

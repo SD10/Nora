@@ -8,7 +8,6 @@ The `DatabaseTarget` protocol requires you to implement 4 properties:
 - baseReference: this is the base reference for all database tasks in this target
 - path: the path to be appended onto the base reference
 - task: this is an enum that represents FirebaseDatabase methods (eg. observe, observeOnce, setValue, etc.)
-- parameters: optional data to upload for a write task
 
 ---
 
@@ -17,8 +16,8 @@ The `DatabaseTarget` protocol requires you to implement 4 properties:
 enum Users: DatabaseTarget {
 	
 	case getUser(id: String)
+	case createUser(email: String, name: String)
 	case deleteUser(id: String)
-	case addFriend(id: String, userID: String)
 
 	var baseReference: FIRDatabaseReference {
 		return FIRDatabase.database().reference().child("users")
@@ -29,8 +28,8 @@ enum Users: DatabaseTarget {
 		switch self {
 		case .getUser(let id), .deleteUser(let id):
 			return id
-		case .addFriend(let id, let userid):
-			return "\(userid)/\(id)"
+		case .createUser:
+			return uniqueID()
 		}
 
 	}
@@ -42,19 +41,8 @@ enum Users: DatabaseTarget {
 			return .observeOnce(.value)
 		case .deleteUser:
 			return .removeValue
-		case .addFriend:
-			return .setValue
-		}
-
-	}
-
-	var parameters: [String: Any]? {
-
-		switch self {
-		case .getUser, .deleteUser:
-			return nil
-		case .addFriend(let friendID):
-			return ["\(friendID)" : true ]
+		case .createUser(let email, let name):
+			return .setValue(["email": email, "name": name])
 		}
 
 	}

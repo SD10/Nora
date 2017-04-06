@@ -10,9 +10,22 @@ import Foundation
 import FirebaseDatabase
 import FirebaseStorage
 
+// MARK: - FirebaseTarget
+
+public protocol FirebaseTarget {}
+
+public extension FirebaseTarget {
+    
+    /// Generate unique id String
+    func uniqueID() -> String {
+        return UUID().uuidString.lowercased()
+    }
+    
+}
+
 // MARK: - DatabaseTarget
 
-public protocol DatabaseTarget {
+public protocol DatabaseTarget: FirebaseTarget {
     
     /// Base reference for your target in Database
     var baseReference: FIRDatabaseReference { get }
@@ -56,7 +69,7 @@ public extension DatabaseTarget {
 
 // MARK: - StorageTarget
 
-public protocol StorageTarget {
+public protocol StorageTarget: FirebaseTarget {
     
     /// Base reference for your target in Storage
     var baseReference: FIRStorageReference { get }
@@ -67,17 +80,4 @@ public protocol StorageTarget {
     /// Type of task you want to perform ( Firebase storage method: eg. put, putFile, write, delete )
     var task: StorageTask { get }
     
-}
-
-// MARK: - FirebaseTarget
-
-public protocol FirebaseTarget {}
-
-public extension FirebaseTarget {
-
-    /// Generate unique id String
-    func uniqueID() -> String {
-        return UUID().uuidString.lowercased()
-    }
-
 }
