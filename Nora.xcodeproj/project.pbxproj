@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07E554301E96B33C00D81D9B /* NoraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5542F1E96B33C00D81D9B /* NoraTests.swift */; };
+		07E554321E96B33C00D81D9B /* Nora.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B062C6CF1E946B59006C3CB8 /* Nora.framework */; };
 		4C3DA810DFDAB2B7494B5061 /* Pods_Nora.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4C9489816D143B076B1BA00 /* Pods_Nora.framework */; };
 		B062C6E01E946B59006C3CB8 /* Nora.h in Headers */ = {isa = PBXBuildFile; fileRef = B062C6D21E946B59006C3CB8 /* Nora.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B062C6F81E946C8A006C3CB8 /* DatabaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C6F71E946C8A006C3CB8 /* DatabaseProvider.swift */; };
@@ -20,7 +22,20 @@
 		B062C7081E946EE0006C3CB8 /* NoraError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C7071E946EE0006C3CB8 /* NoraError.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		07E554331E96B33C00D81D9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B062C6C61E946B59006C3CB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B062C6CE1E946B59006C3CB8;
+			remoteInfo = Nora;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		07E5542D1E96B33C00D81D9B /* NoraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07E5542F1E96B33C00D81D9B /* NoraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoraTests.swift; sourceTree = "<group>"; };
+		07E554311E96B33C00D81D9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A34041646B172CD224A2715 /* Pods-Nora.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nora.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nora/Pods-Nora.debug.xcconfig"; sourceTree = "<group>"; };
 		2A493DF63E18ED29F60987EC /* Pods-NoraTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoraTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NoraTests/Pods-NoraTests.debug.xcconfig"; sourceTree = "<group>"; };
 		47BBF9BAF2B1F6B0AE961F4B /* Pods-NoraTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoraTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NoraTests/Pods-NoraTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -28,8 +43,6 @@
 		B062C6CF1E946B59006C3CB8 /* Nora.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nora.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B062C6D21E946B59006C3CB8 /* Nora.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nora.h; sourceTree = "<group>"; };
 		B062C6D31E946B59006C3CB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B062C6DD1E946B59006C3CB8 /* NoraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoraTests.swift; sourceTree = "<group>"; };
-		B062C6DF1E946B59006C3CB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B062C6F71E946C8A006C3CB8 /* DatabaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseProvider.swift; sourceTree = "<group>"; };
 		B062C6F91E946CED006C3CB8 /* StorageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageProvider.swift; sourceTree = "<group>"; };
 		B062C6FB1E946D27006C3CB8 /* FirebaseTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseTarget.swift; sourceTree = "<group>"; };
@@ -44,6 +57,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		07E5542A1E96B33C00D81D9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07E554321E96B33C00D81D9B /* Nora.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B062C6CB1E946B59006C3CB8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -55,6 +76,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07E5542E1E96B33C00D81D9B /* NoraTests */ = {
+			isa = PBXGroup;
+			children = (
+				07E5542F1E96B33C00D81D9B /* NoraTests.swift */,
+				07E554311E96B33C00D81D9B /* Info.plist */,
+			);
+			path = NoraTests;
+			sourceTree = "<group>";
+		};
 		290DCFB215D413E0B6959017 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -70,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				B062C6D11E946B59006C3CB8 /* Nora */,
-				B062C6DC1E946B59006C3CB8 /* NoraTests */,
+				07E5542E1E96B33C00D81D9B /* NoraTests */,
 				B062C6D01E946B59006C3CB8 /* Products */,
 				290DCFB215D413E0B6959017 /* Pods */,
 				FCE6F04A38E4E8B62D9181C9 /* Frameworks */,
@@ -81,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				B062C6CF1E946B59006C3CB8 /* Nora.framework */,
+				07E5542D1E96B33C00D81D9B /* NoraTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,15 +124,6 @@
 				B062C6D21E946B59006C3CB8 /* Nora.h */,
 			);
 			path = Nora;
-			sourceTree = "<group>";
-		};
-		B062C6DC1E946B59006C3CB8 /* NoraTests */ = {
-			isa = PBXGroup;
-			children = (
-				B062C6DD1E946B59006C3CB8 /* NoraTests.swift */,
-				B062C6DF1E946B59006C3CB8 /* Info.plist */,
-			);
-			path = NoraTests;
 			sourceTree = "<group>";
 		};
 		B062C7091E947363006C3CB8 /* Sources */ = {
@@ -143,6 +165,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		07E5542C1E96B33C00D81D9B /* NoraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07E554351E96B33C00D81D9B /* Build configuration list for PBXNativeTarget "NoraTests" */;
+			buildPhases = (
+				07E554291E96B33C00D81D9B /* Sources */,
+				07E5542A1E96B33C00D81D9B /* Frameworks */,
+				07E5542B1E96B33C00D81D9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07E554341E96B33C00D81D9B /* PBXTargetDependency */,
+			);
+			name = NoraTests;
+			productName = NoraTests;
+			productReference = 07E5542D1E96B33C00D81D9B /* NoraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B062C6CE1E946B59006C3CB8 /* Nora */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B062C6E31E946B59006C3CB8 /* Build configuration list for PBXNativeTarget "Nora" */;
@@ -169,13 +209,16 @@
 		B062C6C61E946B59006C3CB8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = NoraFirebase;
 				TargetAttributes = {
+					07E5542C1E96B33C00D81D9B = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+					};
 					B062C6CE1E946B59006C3CB8 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 3KD7B39L8W;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -194,11 +237,19 @@
 			projectRoot = "";
 			targets = (
 				B062C6CE1E946B59006C3CB8 /* Nora */,
+				07E5542C1E96B33C00D81D9B /* NoraTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		07E5542B1E96B33C00D81D9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B062C6CD1E946B59006C3CB8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -242,6 +293,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		07E554291E96B33C00D81D9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07E554301E96B33C00D81D9B /* NoraTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B062C6CA1E946B59006C3CB8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -260,7 +319,41 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		07E554341E96B33C00D81D9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B062C6CE1E946B59006C3CB8 /* Nora */;
+			targetProxy = 07E554331E96B33C00D81D9B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		07E554361E96B33C00D81D9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				INFOPLIST_FILE = NoraTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.norafirebase.Nora.NoraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		07E554371E96B33C00D81D9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				INFOPLIST_FILE = NoraTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.norafirebase.Nora.NoraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		B062C6E11E946B59006C3CB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -367,7 +460,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 3KD7B39L8W;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -389,7 +482,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 3KD7B39L8W;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -406,6 +499,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		07E554351E96B33C00D81D9B /* Build configuration list for PBXNativeTarget "NoraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07E554361E96B33C00D81D9B /* Debug */,
+				07E554371E96B33C00D81D9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		B062C6C91E946B59006C3CB8 /* Build configuration list for PBXProject "Nora" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -2,12 +2,11 @@
 //  NoraTests.swift
 //  NoraTests
 //
-//  Created by Steven on 4/4/17.
+//  Created by Steven on 4/6/17.
 //  Copyright © 2017 NoraFirebase. All rights reserved.
 //
 
 import XCTest
-@testable import Nora
 
 class NoraTests: XCTestCase {
     
@@ -24,13 +23,7 @@ class NoraTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+		XCTAssert(true)
     }
     
 }
