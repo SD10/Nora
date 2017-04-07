@@ -9,10 +9,18 @@
 import Foundation
 import FirebaseStorage
 
+/// <#Description#>
 public typealias StorageCompletion = (Result<StorageResponse>) -> Void
 
+/// <#Description#>
 public class StorageProvider<Target: StorageTarget> {
     
+    /// <#Description#>
+    ///
+    /// - Parameters:
+    ///   - target: <#target description#>
+    ///   - completion: <#completion description#>
+    /// - Returns: <#return value description#>
     @discardableResult
     public func request(_ target: Target, completion: @escaping StorageCompletion) -> FIRStorageObservableTask? {
         
@@ -86,6 +94,8 @@ public class StorageProvider<Target: StorageTarget> {
         return downloadTask
     }
 }
+
+// MARK: - <#Description#>
 
 private extension StorageProvider {
 

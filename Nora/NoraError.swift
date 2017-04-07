@@ -10,26 +10,30 @@ import Foundation
 
 // MARK: - NoraError
 
+/// <#Description#>
+///
+/// - resultConversion: <#resultConversion description#>
+/// - requestMapping: <#requestMapping description#>
+/// - nullSnapshot: <#nullSnapshot description#>
+/// - jsonMapping: <#jsonMapping description#>
+/// - objectDecoding: <#objectDecoding description#>
+/// - underlying: <#underlying description#>
 public enum NoraError: Error {
     
     case resultConversion
-    
     case requestMapping
-    
     case nullSnapshot
-    
     case jsonMapping
-    
     case objectDecoding
-    
     case underlying(Error)
-    
+	
 }
 
 // MARK: - LocalizedError
 
 extension NoraError: LocalizedError {
 
+    /// <#Description#>
     public var errorDescription: String? {
         switch self {
         case .resultConversion:
