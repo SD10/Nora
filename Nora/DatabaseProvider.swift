@@ -9,15 +9,23 @@
 import Foundation
 import FirebaseDatabase
 
+/// <#Description#>
 public typealias DatabaseCompletion = (Result<DatabaseResponse>) -> Void
+
+/// <#Description#>
 public typealias TransactionBlock = (FIRMutableData) -> FIRTransactionResult
+
+/// <#Description#>
 public typealias JSON = [String: Any]
 
+/// <#Description#>
 public class DatabaseProvider<Target: DatabaseTarget> {
-    
-    /// Make a request to FirebaseDatabase
-    /// - Parameter target: target for the request
-    /// - Parameter completion: completion block with result of the request
+	
+	/// Make a request to FirebaseDatabase
+    ///
+    /// - Parameters:
+    ///   - target: target for the request
+    ///   - completion: completion block with result of the request
     /// - Returns: a handle in the case of an observe request, used to deregister the observer (optional)
     @discardableResult
     public func request(_ target: Target, completion: @escaping DatabaseCompletion) -> UInt? {
@@ -35,7 +43,7 @@ public class DatabaseProvider<Target: DatabaseTarget> {
         }
         return handle
     }
-    
+	
     private func processObserve(_ request: DatabaseRequest, _ completion: @escaping DatabaseCompletion) -> UInt? {
         
         let successMapping = { (snapshot: FIRDataSnapshot) in
@@ -61,7 +69,7 @@ public class DatabaseProvider<Target: DatabaseTarget> {
         
         return handle
     }
-    
+	
     private func processWrite(_ request: DatabaseRequest, _ completion: @escaping DatabaseCompletion) {
         
         let completionBlock = { (error: Error?, reference: FIRDatabaseReference) in
@@ -98,7 +106,7 @@ public class DatabaseProvider<Target: DatabaseTarget> {
             completion(.failure(NoraError.requestMapping))
         }
     }
-    
+	
     private func processTransaction(_ request: DatabaseRequest, _ completion: @escaping DatabaseCompletion) {
         
         let transactionCompletion = { (error: Error?, committed: Bool, snapshot: FIRDataSnapshot?) in
@@ -110,9 +118,11 @@ public class DatabaseProvider<Target: DatabaseTarget> {
     }
 }
 
+
+// MARK: - <#Description#>
+
 private extension DatabaseProvider {
-    
-    
+	
     func convertResponseToResult(snapshot: FIRDataSnapshot?, reference: FIRDatabaseReference?, error: Error?, committed: Bool? = nil) -> Result<DatabaseResponse> {
         
         switch (snapshot, reference, error, committed) {

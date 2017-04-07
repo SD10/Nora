@@ -12,11 +12,15 @@ import FirebaseStorage
 
 // MARK: - FirebaseTarget
 
+/// <#Description#>
 public protocol FirebaseTarget {}
 
+// MARK: - <#Description#>
 public extension FirebaseTarget {
     
     /// Generate unique id String
+    ///
+    /// - Returns: <#return value description#>
     func uniqueID() -> String {
         return UUID().uuidString.lowercased()
     }
@@ -25,11 +29,12 @@ public extension FirebaseTarget {
 
 // MARK: - DatabaseTarget
 
+/// <#Description#>
 public protocol DatabaseTarget: FirebaseTarget {
     
     /// Base reference for your target in Database
     var baseReference: FIRDatabaseReference { get }
-    
+	
     /// Path to be appended to the base reference
     var path: String { get }
     
@@ -47,20 +52,23 @@ public protocol DatabaseTarget: FirebaseTarget {
     
 }
 
+
+// MARK: - <#Description#>
+
 public extension DatabaseTarget {
     
     /// Should task be performed on disconnect ( Defaults to false )
-    var onDisconnect: Bool {
+    public var onDisconnect: Bool {
         return false
     }
     
     /// Allow local events for transaction block ( Defaults to false )
-    var localEvents: Bool {
+    public var localEvents: Bool {
         return false
     }
     
     /// Transaction block to run for .transaction task ( Defaults to FIRTransactionResult.success(withValue: FIRMutableData) )
-    var transactionBlock: (FIRMutableData) -> FIRTransactionResult {
+    public var transactionBlock: (FIRMutableData) -> FIRTransactionResult {
         return { (data: FIRMutableData) in
             return FIRTransactionResult.success(withValue: data)
         }
