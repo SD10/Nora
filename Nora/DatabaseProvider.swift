@@ -15,6 +15,10 @@ public typealias JSON = [String: Any]
 
 public class DatabaseProvider<Target: DatabaseTarget> {
     
+    /// Make a request to FirebaseDatabase
+    /// - Parameter target: target for the request
+    /// - Parameter completion: completion block with result of the request
+    /// - Returns: a handle in the case of an observe request, used to deregister the observer (optional)
     @discardableResult
     public func request(_ target: Target, completion: @escaping DatabaseCompletion) -> UInt? {
         
