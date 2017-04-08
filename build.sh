@@ -9,7 +9,7 @@ rm -rf $DERIVED_DATA &&
 time xcodebuild clean test \
     -workspace Nora.xcworkspace \
     -scheme 'Nora' \
-    -sdk iphonesimulator10.2 \
+    -sdk iphonesimulator \
     -derivedDataPath $DERIVED_DATA \
     -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.2' \
     OTHER_SWIFT_FLAGS='-Xfrontend -debug-time-function-bodies' \
