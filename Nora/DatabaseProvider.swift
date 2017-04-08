@@ -11,7 +11,6 @@ import FirebaseDatabase
 
 public typealias DatabaseCompletion = (Result<DatabaseResponse>) -> Void
 public typealias TransactionBlock = (FIRMutableData) -> FIRTransactionResult
-public typealias JSON = [String: Any]
 
 public class DatabaseProvider<Target: DatabaseTarget> {
     
