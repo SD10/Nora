@@ -23,23 +23,25 @@ public class DatabaseProvider<Target: DatabaseTarget> {
     public func request(_ target: Target, completion: @escaping DatabaseCompletion) -> UInt? {
         
         var handle: UInt?
-        let request = DatabaseRequest(target)
         
-        switch request.task {
+        switch target.task {
         case .observe, .observeOnce:
+            let request = DatabaseQueryRequest(target)
             handle = processObserve(request, completion)
         case .setValue, .updateChildValues, .removeValue:
+            let request = DatabaseRequest(target)
             processWrite(request, completion)
         case .transaction:
+            let request = DatabaseRequest(target)
             processTransaction(request, completion)
         }
         return handle
     }
     
-    private func processObserve(_ request: DatabaseRequest, _ completion: @escaping DatabaseCompletion) -> UInt? {
+    private func processObserve(_ request: DatabaseQueryRequest, _ completion: @escaping DatabaseCompletion) -> UInt? {
         
         let successMapping = { (snapshot: FIRDataSnapshot) in
-            let result = self.convertResponseToResult(snapshot: snapshot, reference: request.reference, error: nil)
+            let result = self.convertResponseToResult(snapshot: snapshot, reference: request.query.ref, error: nil)
             completion(result)
         }
         
@@ -52,9 +54,9 @@ public class DatabaseProvider<Target: DatabaseTarget> {
         
         switch request.task {
         case .observe(let event):
-            handle = request.reference.observe(event, with: successMapping, withCancel: failureMapping)
+            handle = request.query.observe(event, with: successMapping, withCancel: failureMapping)
         case .observeOnce(let event):
-            request.reference.observeSingleEvent(of: event, with: successMapping, withCancel: failureMapping)
+            request.query.observeSingleEvent(of: event, with: successMapping, withCancel: failureMapping)
         default:
             completion(.failure(NoraError.requestMapping))
         }

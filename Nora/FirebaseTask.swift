@@ -39,3 +39,36 @@ public enum StorageTask {
     case delete // delete
     
 }
+
+// MARK: - DatabaseQuery
+
+/// Represents the FIRDatabaseQuery methods
+public enum DatabaseQuery {
+
+    case limitedFirst(UInt) // queryLimited(toFirst limit: UInt)
+    case limitedLast(UInt) // queryLimited(toLast limit: UInt)
+    case orderedByChild(key: String) // queryOrdered(byChild key: String)
+    case orderedByKey // queryOrderedByKey()
+    case orderedByValue // queryOrderedByValue()
+    case orderedByPriority // queryOrderedByPriority
+    case startingAtValue(Any?)
+    case startingAt(value: Any?, childKey: String?) // queryStarting(atValue: Any?, childKey: String?)
+    case endingAtValue(value: Any?) // queryEnding(atValue: Any?)
+    case endingAt(value: Any?, childKey: String?) // queryEnding(atValue: Any?, childKey: String?)
+    case equalToValue(Any?) // queryEqual(toValue: Any?)
+    case equalTo(value: Any, childKey: String?) // queryEqual(toValue value: Any?, childKey: String?)
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
