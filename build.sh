@@ -11,7 +11,7 @@ time xcodebuild clean test \
     -scheme 'Nora' \
     -sdk iphonesimulator \
     -derivedDataPath $DERIVED_DATA \
-    -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.3' \
+    -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.2' \
     OTHER_SWIFT_FLAGS='-Xfrontend -debug-time-function-bodies' \
     | tee build.log \
     | xcpretty &&
