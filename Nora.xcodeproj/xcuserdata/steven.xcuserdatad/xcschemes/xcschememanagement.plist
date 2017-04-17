@@ -2,14 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>SchemeUserState</key>
-	<dict>
-		<key>Nora.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
-	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>07E5542C1E96B33C00D81D9B</key>
@@ -18,11 +10,6 @@
 			<true/>
 		</dict>
 		<key>B062C6CE1E946B59006C3CB8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B062C6D71E946B59006C3CB8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

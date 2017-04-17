@@ -13,7 +13,7 @@ import FirebaseDatabase
 
 public protocol JSONDecodeable {
 
-    init?(_ json: JSON)
+    init?(_ json: [String: Any])
 
 }
 
@@ -42,19 +42,19 @@ public extension DatabaseResponse {
 
     /// The FIRDataSnapshot of the response as JSON
     var json: [String: Any]? {
-        return snapshot?.value as? JSON
+        return snapshot?.value as? [String: Any]
     }
     
     /// Decode the FIRDataSnapshot to a JSONDecodeable type
     /// - Parameter transform: closure that takes in JSON and returns a JSONDecodeable type
     /// - Returns: decoded object
-    public func mapTo<T: JSONDecodeable>(_ transform: (JSON) -> T?) throws -> T {
+    public func mapTo<T: JSONDecodeable>(_ transform: ([String: Any]) -> T?) throws -> T {
         
         guard let snapshot = snapshot, snapshot.exists() else {
             throw NoraError.nullSnapshot
         }
         
-        guard let json = snapshot.value as? JSON else {
+        guard let json = snapshot.value as? [String: Any] else {
             throw NoraError.jsonMapping
         }
         
@@ -67,16 +67,16 @@ public extension DatabaseResponse {
     }
     
     /// Convert the children of a FIRDataSnapshot to JSON
-    public func childrenAsJSON() throws -> [JSON] {
+    public func childrenAsJSON() throws -> [[String: Any]] {
         
         guard let snapshot = snapshot, snapshot.exists() else {
             throw NoraError.nullSnapshot
         }
         
-        var result: [JSON] = []
+        var result: [[String: Any]] = []
         
         for child in snapshot.children {
-            guard let snapshot = child as? FIRDataSnapshot, let json = snapshot.value as? JSON else {
+            guard let snapshot = child as? FIRDataSnapshot, let json = snapshot.value as? [String: Any] else {
                 throw NoraError.jsonMapping
             }
             
@@ -90,7 +90,7 @@ public extension DatabaseResponse {
     /// Decode the children of FIRDataSnapshot to a JSONDecodeable type
     /// - Parameter transform: a closure taking in JSON and returning a JSONDecodeable type
     /// - Returns: an array of decoded objects
-    public func mapChildrenTo<T: JSONDecodeable>(_ transform: (JSON) -> T?) throws -> [T] {
+    public func mapChildrenTo<T: JSONDecodeable>(_ transform: ([String: Any]) -> T?) throws -> [T] {
         
         let childJSON = try childrenAsJSON()
         
