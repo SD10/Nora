@@ -39,3 +39,70 @@ public enum StorageTask {
     case delete // delete
     
 }
+
+// MARK: - DatabaseQuery
+
+/// Represents the FIRDatabaseQuery methods
+public enum DatabaseQuery {
+
+    case limitedFirst(UInt) // queryLimited(toFirst limit: UInt)
+    case limitedLast(UInt) // queryLimited(toLast limit: UInt)
+    case orderedByChild(key: String) // queryOrdered(byChild key: String)
+    case orderedByKey // queryOrderedByKey()
+    case orderedByValue // queryOrderedByValue()
+    case orderedByPriority // queryOrderedByPriority
+    case startingAtValue(Any?)
+    case startingAt(value: Any?, childKey: String?) // queryStarting(atValue: Any?, childKey: String?)
+    case endingAtValue(value: Any?) // queryEnding(atValue: Any?)
+    case endingAt(value: Any?, childKey: String?) // queryEnding(atValue: Any?, childKey: String?)
+    case equalToValue(Any?) // queryEqual(toValue: Any?)
+    case equalTo(value: Any, childKey: String?) // queryEqual(toValue value: Any?, childKey: String?)
+
+}
+
+public extension DatabaseQuery {
+
+  func prepare(_ query: FIRDatabaseQuery) -> FIRDatabaseQuery {
+    
+    switch self {
+      case .limitedFirst(let n):
+        return query.queryLimited(toFirst: n)
+      case .limitedLast(let n):
+        return query.queryLimited(toLast: n)
+      case .orderedByChild(let key):
+        return query.queryOrdered(byChild: key)
+      case .orderedByKey:
+        return query.queryOrderedByKey()
+      case .orderedByValue:
+        return query.queryOrderedByValue()
+      case .orderedByPriority:
+        return query.queryOrderedByPriority()
+      case .startingAtValue(let value):
+        return query.queryStarting(atValue: value)
+      case .startingAt(let value, let childKey):
+        return query.queryStarting(atValue: value, childKey: childKey)
+      case .endingAtValue(let value):
+        return query.queryEnding(atValue: value)
+      case .endingAt(let value, let childKey):
+        return query.queryEnding(atValue: value, childKey: childKey)
+      case .equalToValue(let value):
+        return query.queryEqual(toValue: value)
+      case .equalTo(let value, let childKey):
+        return query.queryEqual(toValue: value, childKey: childKey)
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

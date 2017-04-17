@@ -10,16 +10,17 @@
 		07E554301E96B33C00D81D9B /* NoraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5542F1E96B33C00D81D9B /* NoraTests.swift */; };
 		07E554321E96B33C00D81D9B /* Nora.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B062C6CF1E946B59006C3CB8 /* Nora.framework */; };
 		4C3DA810DFDAB2B7494B5061 /* Pods_Nora.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4C9489816D143B076B1BA00 /* Pods_Nora.framework */; };
+		B0602A3C1E98F03D0087BBD9 /* DatabaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0602A321E98F03D0087BBD9 /* DatabaseProvider.swift */; };
+		B0602A3D1E98F03D0087BBD9 /* StorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0602A331E98F03D0087BBD9 /* StorageProvider.swift */; };
+		B0602A3E1E98F03D0087BBD9 /* FirebaseTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0602A341E98F03D0087BBD9 /* FirebaseTarget.swift */; };
+		B0602A3F1E98F03D0087BBD9 /* FirebaseTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0602A351E98F03D0087BBD9 /* FirebaseTask.swift */; };
+		B0602A401E98F03D0087BBD9 /* DatabaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0602A361E98F03D0087BBD9 /* DatabaseRequest.swift */; };
+		B0602A411E98F03D0087BBD9 /* DatabaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0602A371E98F03D0087BBD9 /* DatabaseResponse.swift */; };
+		B0602A421E98F03D0087BBD9 /* StorageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0602A381E98F03D0087BBD9 /* StorageRequest.swift */; };
+		B0602A431E98F03D0087BBD9 /* StorageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0602A391E98F03D0087BBD9 /* StorageResponse.swift */; };
+		B0602A441E98F03D0087BBD9 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0602A3A1E98F03D0087BBD9 /* Result.swift */; };
+		B0602A451E98F03D0087BBD9 /* NoraError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0602A3B1E98F03D0087BBD9 /* NoraError.swift */; };
 		B062C6E01E946B59006C3CB8 /* Nora.h in Headers */ = {isa = PBXBuildFile; fileRef = B062C6D21E946B59006C3CB8 /* Nora.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B062C6F81E946C8A006C3CB8 /* DatabaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C6F71E946C8A006C3CB8 /* DatabaseProvider.swift */; };
-		B062C6FA1E946CED006C3CB8 /* StorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C6F91E946CED006C3CB8 /* StorageProvider.swift */; };
-		B062C6FC1E946D27006C3CB8 /* FirebaseTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C6FB1E946D27006C3CB8 /* FirebaseTarget.swift */; };
-		B062C6FE1E946D74006C3CB8 /* FirebaseTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C6FD1E946D74006C3CB8 /* FirebaseTask.swift */; };
-		B062C7001E946DB4006C3CB8 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C6FF1E946DB4006C3CB8 /* Request.swift */; };
-		B062C7021E946E0F006C3CB8 /* DatabaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C7011E946E0F006C3CB8 /* DatabaseResponse.swift */; };
-		B062C7041E946E81006C3CB8 /* StorageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C7031E946E81006C3CB8 /* StorageResponse.swift */; };
-		B062C7061E946EBD006C3CB8 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C7051E946EBD006C3CB8 /* Result.swift */; };
-		B062C7081E946EE0006C3CB8 /* NoraError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062C7071E946EE0006C3CB8 /* NoraError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,18 +41,19 @@
 		2A493DF63E18ED29F60987EC /* Pods-NoraTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoraTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NoraTests/Pods-NoraTests.debug.xcconfig"; sourceTree = "<group>"; };
 		47BBF9BAF2B1F6B0AE961F4B /* Pods-NoraTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoraTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NoraTests/Pods-NoraTests.release.xcconfig"; sourceTree = "<group>"; };
 		5C9D2F34406916531BC82016 /* Pods_NoraTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoraTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0602A321E98F03D0087BBD9 /* DatabaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseProvider.swift; sourceTree = "<group>"; };
+		B0602A331E98F03D0087BBD9 /* StorageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageProvider.swift; sourceTree = "<group>"; };
+		B0602A341E98F03D0087BBD9 /* FirebaseTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseTarget.swift; sourceTree = "<group>"; };
+		B0602A351E98F03D0087BBD9 /* FirebaseTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseTask.swift; sourceTree = "<group>"; };
+		B0602A361E98F03D0087BBD9 /* DatabaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseRequest.swift; sourceTree = "<group>"; };
+		B0602A371E98F03D0087BBD9 /* DatabaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseResponse.swift; sourceTree = "<group>"; };
+		B0602A381E98F03D0087BBD9 /* StorageRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageRequest.swift; sourceTree = "<group>"; };
+		B0602A391E98F03D0087BBD9 /* StorageResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageResponse.swift; sourceTree = "<group>"; };
+		B0602A3A1E98F03D0087BBD9 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		B0602A3B1E98F03D0087BBD9 /* NoraError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoraError.swift; sourceTree = "<group>"; };
 		B062C6CF1E946B59006C3CB8 /* Nora.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nora.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B062C6D21E946B59006C3CB8 /* Nora.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nora.h; sourceTree = "<group>"; };
 		B062C6D31E946B59006C3CB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B062C6F71E946C8A006C3CB8 /* DatabaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseProvider.swift; sourceTree = "<group>"; };
-		B062C6F91E946CED006C3CB8 /* StorageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageProvider.swift; sourceTree = "<group>"; };
-		B062C6FB1E946D27006C3CB8 /* FirebaseTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseTarget.swift; sourceTree = "<group>"; };
-		B062C6FD1E946D74006C3CB8 /* FirebaseTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseTask.swift; sourceTree = "<group>"; };
-		B062C6FF1E946DB4006C3CB8 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		B062C7011E946E0F006C3CB8 /* DatabaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseResponse.swift; sourceTree = "<group>"; };
-		B062C7031E946E81006C3CB8 /* StorageResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageResponse.swift; sourceTree = "<group>"; };
-		B062C7051E946EBD006C3CB8 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		B062C7071E946EE0006C3CB8 /* NoraError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoraError.swift; sourceTree = "<group>"; };
 		C410A5BC1FD4811A5D6769B7 /* Pods-Nora.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nora.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nora/Pods-Nora.release.xcconfig"; sourceTree = "<group>"; };
 		C4C9489816D143B076B1BA00 /* Pods_Nora.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nora.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -129,15 +131,16 @@
 		B062C7091E947363006C3CB8 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				B062C6F71E946C8A006C3CB8 /* DatabaseProvider.swift */,
-				B062C6F91E946CED006C3CB8 /* StorageProvider.swift */,
-				B062C6FB1E946D27006C3CB8 /* FirebaseTarget.swift */,
-				B062C6FD1E946D74006C3CB8 /* FirebaseTask.swift */,
-				B062C6FF1E946DB4006C3CB8 /* Request.swift */,
-				B062C7011E946E0F006C3CB8 /* DatabaseResponse.swift */,
-				B062C7031E946E81006C3CB8 /* StorageResponse.swift */,
-				B062C7051E946EBD006C3CB8 /* Result.swift */,
-				B062C7071E946EE0006C3CB8 /* NoraError.swift */,
+				B0602A321E98F03D0087BBD9 /* DatabaseProvider.swift */,
+				B0602A331E98F03D0087BBD9 /* StorageProvider.swift */,
+				B0602A341E98F03D0087BBD9 /* FirebaseTarget.swift */,
+				B0602A351E98F03D0087BBD9 /* FirebaseTask.swift */,
+				B0602A361E98F03D0087BBD9 /* DatabaseRequest.swift */,
+				B0602A371E98F03D0087BBD9 /* DatabaseResponse.swift */,
+				B0602A381E98F03D0087BBD9 /* StorageRequest.swift */,
+				B0602A391E98F03D0087BBD9 /* StorageResponse.swift */,
+				B0602A3A1E98F03D0087BBD9 /* Result.swift */,
+				B0602A3B1E98F03D0087BBD9 /* NoraError.swift */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -305,15 +308,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B062C6FA1E946CED006C3CB8 /* StorageProvider.swift in Sources */,
-				B062C6FE1E946D74006C3CB8 /* FirebaseTask.swift in Sources */,
-				B062C7081E946EE0006C3CB8 /* NoraError.swift in Sources */,
-				B062C6F81E946C8A006C3CB8 /* DatabaseProvider.swift in Sources */,
-				B062C7021E946E0F006C3CB8 /* DatabaseResponse.swift in Sources */,
-				B062C7041E946E81006C3CB8 /* StorageResponse.swift in Sources */,
-				B062C7061E946EBD006C3CB8 /* Result.swift in Sources */,
-				B062C7001E946DB4006C3CB8 /* Request.swift in Sources */,
-				B062C6FC1E946D27006C3CB8 /* FirebaseTarget.swift in Sources */,
+				B0602A441E98F03D0087BBD9 /* Result.swift in Sources */,
+				B0602A421E98F03D0087BBD9 /* StorageRequest.swift in Sources */,
+				B0602A3D1E98F03D0087BBD9 /* StorageProvider.swift in Sources */,
+				B0602A411E98F03D0087BBD9 /* DatabaseResponse.swift in Sources */,
+				B0602A3F1E98F03D0087BBD9 /* FirebaseTask.swift in Sources */,
+				B0602A431E98F03D0087BBD9 /* StorageResponse.swift in Sources */,
+				B0602A3C1E98F03D0087BBD9 /* DatabaseProvider.swift in Sources */,
+				B0602A3E1E98F03D0087BBD9 /* FirebaseTarget.swift in Sources */,
+				B0602A451E98F03D0087BBD9 /* NoraError.swift in Sources */,
+				B0602A401E98F03D0087BBD9 /* DatabaseRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +335,7 @@
 		07E554361E96B33C00D81D9B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				INFOPLIST_FILE = NoraTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
@@ -344,6 +349,7 @@
 		07E554371E96B33C00D81D9B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				INFOPLIST_FILE = NoraTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;

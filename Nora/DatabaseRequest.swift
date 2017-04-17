@@ -1,14 +1,13 @@
 //
-//  Request.swift
+//  DatabaseRequest.swift
 //  Nora
 //
-//  Created by Steven on 4/4/17.
+//  Created by Steven on 4/8/17.
 //  Copyright © 2017 NoraFirebase. All rights reserved.
 //
 
 import Foundation
 import FirebaseDatabase
-import FirebaseStorage
 
 // MARK: - DatabaseRequest
 
@@ -31,22 +30,22 @@ extension DatabaseRequest {
         self.onDisconnect = target.onDisconnect
         self.localEvents = target.localEvents
     }
+}
+
+// MARK: - DatabaseQueryRequest
+
+struct DatabaseQueryRequest {
+    
+    var query: FIRDatabaseQuery
+    var task: DatabaseTask
     
 }
 
-// MARK: - StorageRequest
-
-struct StorageRequest {
+extension DatabaseQueryRequest {
     
-    let reference: FIRStorageReference
-    let task: StorageTask
-    
-}
-
-extension StorageRequest {
-    
-    init(_ target: StorageTarget) {
-        self.reference = target.baseReference.child(target.path)
+    init(_ target: DatabaseTarget) {
+        let reference = target.baseReference.child(target.path)
+        self.query = target.queries?.reduce(reference) { $1.prepare($0) } ?? reference
         self.task = target.task
     }
     

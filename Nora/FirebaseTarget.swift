@@ -36,6 +36,9 @@ public protocol DatabaseTarget: FirebaseTarget {
     /// Type of task you want to perform ( Firebase method: eg. observe, observeOnce, setValue, etc. )
     var task: DatabaseTask { get }
     
+    /// Queries to append to the end of the path in order as listed
+    var queries: [DatabaseQuery]? { get }
+    
     /// Transaction block to run for .transaction task ( Defaults to FIRTransactionResult.success(withValue: FIRMutableData) )
     var transactionBlock: (FIRMutableData) -> FIRTransactionResult { get }
     
@@ -48,6 +51,11 @@ public protocol DatabaseTarget: FirebaseTarget {
 }
 
 public extension DatabaseTarget {
+    
+    /// Queries to append to the end of the path in order as listed
+    var queries: [DatabaseQuery]? {
+        return nil
+    }
     
     /// Should task be performed on disconnect ( Defaults to false )
     var onDisconnect: Bool {
