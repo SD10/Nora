@@ -19,7 +19,7 @@ public class DatabaseProvider<Target: DatabaseTarget> {
     /// - Parameter completion: completion block with result of the request
     /// - Returns: a handle in the case of an observe request, used to deregister the observer (optional)
     @discardableResult
-    public func request(_ target: Target, completion: @escaping DatabaseCompletion) -> UInt? {
+    public func request(_ target: Target, completion: @escaping DatabaseCompletion = { _ in }) -> UInt? {
         
         var handle: UInt?
         
