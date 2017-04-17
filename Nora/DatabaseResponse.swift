@@ -45,6 +45,26 @@ public extension DatabaseResponse {
         return snapshot?.value as? [String: Any]
     }
     
+    /// Retrieve value for FIRDataSnapshot for specified key
+    /// - Parameter key: key to use to look up value in dictionary
+    /// - Returns: value for specified key
+    public func mapKey(_ key: String) throws -> Any {
+        
+        guard let snapshot = snapshot, snapshot.exists() else {
+            throw NoraError.nullSnapshot
+        }
+        
+        guard let json = snapshot.value as? [String: Any] else {
+            throw NoraError.jsonMapping
+        }
+        
+        guard let result = json[key] else {
+            throw NoraError.objectDecoding
+        }
+        
+        return result
+    }
+    
     /// Decode the FIRDataSnapshot to a JSONDecodeable type
     /// - Parameter transform: closure that takes in JSON and returns a JSONDecodeable type
     /// - Returns: decoded object
@@ -67,6 +87,7 @@ public extension DatabaseResponse {
     }
     
     /// Convert the children of a FIRDataSnapshot to JSON
+    /// - Returns: an array of the child snapshots as JSON
     public func childrenAsJSON() throws -> [[String: Any]] {
         
         guard let snapshot = snapshot, snapshot.exists() else {
