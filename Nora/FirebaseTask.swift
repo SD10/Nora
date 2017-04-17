@@ -60,6 +60,40 @@ public enum DatabaseQuery {
 
 }
 
+public extension DatabaseQuery {
+
+  func prepare(_ query: FIRDatabaseQuery) -> FIRDatabaseQuery {
+    
+    switch self {
+      case .limitedFirst(let n):
+        return query.queryLimited(toFirst: n)
+      case .limitedLast(let n):
+        return query.queryLimited(toLast: n)
+      case .orderedByChild(let key):
+        return query.queryOrdered(byChild: key)
+      case .orderedByKey:
+        return query.queryOrderedByKey()
+      case .orderedByValue:
+        return query.queryOrderedByValue()
+      case .orderedByPriority:
+        return query.queryOrderedByPriority()
+      case .startingAtValue(let value):
+        return query.queryStarting(atValue: value)
+      case .startingAt(let value, let childKey):
+        return query.queryStarting(atValue: value, childKey: childKey)
+      case .endingAtValue(let value):
+        return query.queryEnding(atValue: value)
+      case .endingAt(let value, let childKey):
+        return query.queryEnding(atValue: value, childKey: childKey)
+      case .equalToValue(let value):
+        return query.queryEqual(toValue: value)
+      case .equalTo(let value, let childKey):
+        return query.queryEqual(toValue: value, childKey: childKey)
+    }
+  }
+
+}
+
 
 
 
