@@ -33,7 +33,8 @@
 
 Nora is a Firebase abstraction layer for working with FirebaseDatabase and FirebaseStorage.
 
-You shouldn't have to spend all your time cleaning up your view controllers and trying to write reusable Firebase code.
+Stop spending all that time cleaning up your view controllers and trying to write reusable Firebase code.
+
 Let Nora handle that for you. Your time is better spent on what you do best. Writing great Apps!
 
 Simply put, working with Firebase just got whole lot easier.
@@ -80,28 +81,44 @@ pod 'FirebaseStorage', '~>1.0.5'
 
 Then run `pod install`
 
-And that's it!
-
 ---
 
 ## Example
 
 ### Working with FirebaseDatabase
 
-After [setting up a target](https://github.com/SD10/Nora/blob/master/DatabaseProvider.md) making requests is simple.
+After [setting up a target](https://github.com/SD10/Nora/blob/master/Documentation/DatabaseProviderExample.md) making requests is simple.
 
 ```swift
 
 let database = DatabaseProvider<Users>()
 
 database.request(.getUser(id: "1")) { result in
-	switch result {
-	case .success(let response):
-		print("Nora: Download Success!")
-		let snapshot = response.snapshot
-	case .failure(let error):
-		print("We failed")
-	}
+  switch result {
+  case .success(let response):
+    let snapshot = response.snapshot
+  case .failure(let error):
+    print(error.localizedDescription)
+  }
+}
+
+```
+
+### Database Response Decoding
+
+Provide a JSON initializer for your custom types and easily convert the database response:
+
+```swift
+
+let database = DatabaseProvider<Users>()
+
+database.request(.getUser(id: "1")) { result in
+  switch result {
+  case .success(let response):
+    let user = try? response.mapTo(User.init)
+  case .failure(let error):
+    print(error.localizedDescription)
+  }
 }
 
 ```
@@ -117,15 +134,23 @@ let avatarData = Data()
 var meta = FIRStorageMetadata?
 
 storage.request(.upload(avatarData, meta)) { result in
-	switch result {
-	case .success(_):
-		print("Nora: Upload Success!")
-	case .failure(let error):
-		print("Something went wrong")
-	}
+  switch result {
+  case .success(_):
+    print("Upload Success!")
+  case .failure(let error):
+    print(error.localizedDescription)
+  }
 }
 
 ```
+
+---
+
+## Documentation (In Progress)
+
+[DatabaseTarget Documentation](https://github.com/SD10/Nora/blob/master/Documentation/DatabaseTargetDocs.md)
+
+[DatabaseProvider Documentation](https://github.com/SD10/Nora/blob/master/Documentation/DatabaseProviderDocs.md)
 
 ---
 
