@@ -21,7 +21,7 @@ struct StorageRequest {
 extension StorageRequest {
     
     init(_ target: StorageTarget) {
-        self.reference = target.baseReference.child(target.path)
+        self.reference = target.path == "" ? target.baseReference : target.baseReference.child(target.path)
         self.task = target.task
     }
     

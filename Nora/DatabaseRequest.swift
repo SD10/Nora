@@ -24,7 +24,7 @@ struct DatabaseRequest {
 extension DatabaseRequest {
     
     init(_ target: DatabaseTarget) {
-        self.reference = target.baseReference.child(target.path)
+        self.reference = target.path == "" ? target.baseReference : target.baseReference.child(target.path)
         self.task = target.task
         self.transactionBlock = target.transactionBlock
         self.onDisconnect = target.onDisconnect
@@ -44,7 +44,7 @@ struct DatabaseQueryRequest {
 extension DatabaseQueryRequest {
     
     init(_ target: DatabaseTarget) {
-        let reference = target.baseReference.child(target.path)
+        let reference = target.path == "" ? target.baseReference : target.baseReference.child(target.path)
         self.query = target.queries?.reduce(reference) { $1.prepare($0) } ?? reference
         self.task = target.task
     }
