@@ -87,7 +87,7 @@ Then run `pod install`
 
 ### Working with FirebaseDatabase
 
-After [setting up a target](https://github.com/SD10/Nora/blob/master/Documentation/DatabaseProviderExample.md) making requests is simple.
+After [setting up a target](https://github.com/SD10/Nora/blob/master/Documentation/Examples/DatabaseProviderExample.md) making requests is simple.
 
 ```swift
 
@@ -148,9 +148,9 @@ storage.request(.upload(avatarData, meta)) { result in
 
 ## Documentation (In Progress)
 
-[DatabaseTarget Documentation](https://github.com/SD10/Nora/blob/master/Documentation/DatabaseTargetDocs.md)
+[DatabaseTarget Documentation](https://github.com/SD10/Nora/blob/master/Documentation/Documentation/DatabaseTargetDocs.md)
 
-[DatabaseProvider Documentation](https://github.com/SD10/Nora/blob/master/Documentation/DatabaseProviderDocs.md)
+[DatabaseProvider Documentation](https://github.com/SD10/Nora/blob/master/Documentation/Documentation/DatabaseProviderDocs.md)
 
 ---
 

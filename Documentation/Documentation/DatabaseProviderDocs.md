@@ -28,7 +28,7 @@ Path to be appended to the base reference.
 - **type**: Read-Only Property
 - **return type**: String
 
---
+---
 
 ## `task`
 Type of task you want to perform. ( Firebase method: eg. observe, observeOnce, setValue, etc. )
