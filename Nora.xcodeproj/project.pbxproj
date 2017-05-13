@@ -122,8 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				B062C7091E947363006C3CB8 /* Sources */,
-				B062C6D31E946B59006C3CB8 /* Info.plist */,
-				B062C6D21E946B59006C3CB8 /* Nora.h */,
+				B0FF35661EC6E7C8005C5F62 /* Supporting */,
 			);
 			path = Nora;
 			sourceTree = "<group>";
@@ -143,6 +142,15 @@
 				B0602A3B1E98F03D0087BBD9 /* NoraError.swift */,
 			);
 			name = Sources;
+			sourceTree = "<group>";
+		};
+		B0FF35661EC6E7C8005C5F62 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				B062C6D31E946B59006C3CB8 /* Info.plist */,
+				B062C6D21E946B59006C3CB8 /* Nora.h */,
+			);
+			name = Supporting;
 			sourceTree = "<group>";
 		};
 		FCE6F04A38E4E8B62D9181C9 /* Frameworks */ = {

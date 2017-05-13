@@ -3,6 +3,10 @@
  </p>
  
  <p align="center">
+     <a href="https://codebeat.co/projects/github-com-sd10-nora-master">
+         <img src="https://codebeat.co/badges/222038d6-dd5d-4253-94a6-63f00d3a1ae9" 
+              alt="codebeat badge">
+     </a>
      <a href="https://travis-ci.org/SD10/Nora">
          <img src="https://travis-ci.org/SD10/Nora.svg?branch=master"
               alt="Build Status">
