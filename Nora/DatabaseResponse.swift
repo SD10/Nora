@@ -21,14 +21,14 @@ public protocol JSONDecodeable {
 
 public struct DatabaseResponse {
     
-    public let snapshot: FIRDataSnapshot?
-    public let reference: FIRDatabaseReference
+    public let snapshot: DataSnapshot?
+    public let reference: DatabaseReference
     public let isCommitted: Bool
 }
 
 public extension DatabaseResponse {
     
-    init(reference: FIRDatabaseReference, snapshot: FIRDataSnapshot? = nil, isCommitted: Bool = false) {
+    init(reference: DatabaseReference, snapshot: DataSnapshot? = nil, isCommitted: Bool = false) {
         self.reference = reference
         self.snapshot = snapshot
         self.isCommitted = isCommitted
@@ -97,7 +97,7 @@ public extension DatabaseResponse {
         var result: [[String: Any]] = []
         
         for child in snapshot.children {
-            guard let snapshot = child as? FIRDataSnapshot, let json = snapshot.value as? [String: Any] else {
+            guard let snapshot = child as? DataSnapshot, let json = snapshot.value as? [String: Any] else {
                 throw NoraError.jsonMapping
             }
             

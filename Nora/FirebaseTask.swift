@@ -13,10 +13,10 @@ import FirebaseStorage
 // MARK: - DatabaseTask
 
 /// Represents the read/write methods of Firebase
-public enum DatabaseTask {
+public enum NRDatabaseTask {
     
-    case observe(FIRDataEventType)
-    case observeOnce(FIRDataEventType)
+    case observe(DataEventType)
+    case observeOnce(DataEventType)
     case setValue(Any?)
     case updateChildValues([AnyHashable: Any])
     case removeValue
@@ -27,15 +27,15 @@ public enum DatabaseTask {
 // MARK: - StorageTask
 
 /// Represents the read/write methods of FirebaseStorage
-public enum StorageTask {
+public enum NRStorageTask {
     
-    case upload(Data, FIRStorageMetadata?) // put
-    case uploadFile(to: URL, FIRStorageMetadata?) // putFile
+    case upload(Data, StorageMetadata?) // put
+    case uploadFile(to: URL, StorageMetadata?) // putFile
     case downloadData(maxSize: Int64) // data
     case downloadToURL(URL) // write
     case downloadURL // downloadURL
     case downloadMetadata // metadata
-    case update(FIRStorageMetadata) // update
+    case update(StorageMetadata) // update
     case delete // delete
     
 }
@@ -43,7 +43,7 @@ public enum StorageTask {
 // MARK: - DatabaseQuery
 
 /// Represents the FIRDatabaseQuery methods
-public enum DatabaseQuery {
+public enum NRDatabaseQuery {
 
     case limitedFirst(UInt) // queryLimited(toFirst limit: UInt)
     case limitedLast(UInt) // queryLimited(toLast limit: UInt)
@@ -60,9 +60,9 @@ public enum DatabaseQuery {
 
 }
 
-public extension DatabaseQuery {
+public extension NRDatabaseQuery {
 
-  func prepare(_ query: FIRDatabaseQuery) -> FIRDatabaseQuery {
+  func prepare(_ query: DatabaseQuery) -> DatabaseQuery {
     
     switch self {
       case .limitedFirst(let n):
@@ -93,16 +93,3 @@ public extension DatabaseQuery {
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

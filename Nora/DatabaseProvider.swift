@@ -10,7 +10,7 @@ import Foundation
 import FirebaseDatabase
 
 public typealias DatabaseCompletion = (Result<DatabaseResponse>) -> Void
-public typealias TransactionBlock = (FIRMutableData) -> FIRTransactionResult
+public typealias TransactionBlock = (MutableData) -> TransactionResult
 
 public class DatabaseProvider<Target: DatabaseTarget> {
     
@@ -39,7 +39,7 @@ public class DatabaseProvider<Target: DatabaseTarget> {
     
     private func processObserve(_ request: DatabaseQueryRequest, _ completion: @escaping DatabaseCompletion) -> UInt? {
         
-        let successMapping = { (snapshot: FIRDataSnapshot) in
+        let successMapping = { (snapshot: DataSnapshot) in
             let result = self.convertResponseToResult(snapshot: snapshot, reference: request.query.ref, error: nil)
             completion(result)
         }
@@ -65,7 +65,7 @@ public class DatabaseProvider<Target: DatabaseTarget> {
     
     private func processWrite(_ request: DatabaseRequest, _ completion: @escaping DatabaseCompletion) {
         
-        let completionBlock = { (error: Error?, reference: FIRDatabaseReference) in
+        let completionBlock = { (error: Error?, reference: DatabaseReference) in
             let result = self.convertResponseToResult(snapshot: nil, reference: reference, error: error)
             completion(result)
         }
@@ -102,7 +102,7 @@ public class DatabaseProvider<Target: DatabaseTarget> {
     
     private func processTransaction(_ request: DatabaseRequest, _ completion: @escaping DatabaseCompletion) {
         
-        let transactionCompletion = { (error: Error?, committed: Bool, snapshot: FIRDataSnapshot?) in
+        let transactionCompletion = { (error: Error?, committed: Bool, snapshot: DataSnapshot?) in
             let result = self.convertResponseToResult(snapshot: snapshot, reference: request.reference, error: error, committed: committed)
             completion(result)
         }
@@ -114,7 +114,7 @@ public class DatabaseProvider<Target: DatabaseTarget> {
 private extension DatabaseProvider {
     
     
-    func convertResponseToResult(snapshot: FIRDataSnapshot?, reference: FIRDatabaseReference?, error: Error?, committed: Bool? = nil) -> Result<DatabaseResponse> {
+    func convertResponseToResult(snapshot: DataSnapshot?, reference: DatabaseReference?, error: Error?, committed: Bool? = nil) -> Result<DatabaseResponse> {
         
         switch (snapshot, reference, error, committed) {
         case let (snapshot, .some(reference), .none, .some(committed)):
