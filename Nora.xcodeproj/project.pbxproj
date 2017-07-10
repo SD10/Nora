@@ -10,16 +10,26 @@
 		07E554301E96B33C00D81D9B /* NoraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5542F1E96B33C00D81D9B /* NoraTests.swift */; };
 		07E554321E96B33C00D81D9B /* Nora.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B062C6CF1E946B59006C3CB8 /* Nora.framework */; };
 		4C3DA810DFDAB2B7494B5061 /* Pods_Nora.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4C9489816D143B076B1BA00 /* Pods_Nora.framework */; };
-		B0602A3C1E98F03D0087BBD9 /* DatabaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0602A321E98F03D0087BBD9 /* DatabaseProvider.swift */; };
-		B0602A3D1E98F03D0087BBD9 /* StorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0602A331E98F03D0087BBD9 /* StorageProvider.swift */; };
-		B0602A3E1E98F03D0087BBD9 /* FirebaseTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0602A341E98F03D0087BBD9 /* FirebaseTarget.swift */; };
-		B0602A3F1E98F03D0087BBD9 /* FirebaseTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0602A351E98F03D0087BBD9 /* FirebaseTask.swift */; };
-		B0602A401E98F03D0087BBD9 /* DatabaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0602A361E98F03D0087BBD9 /* DatabaseRequest.swift */; };
-		B0602A411E98F03D0087BBD9 /* DatabaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0602A371E98F03D0087BBD9 /* DatabaseResponse.swift */; };
-		B0602A421E98F03D0087BBD9 /* StorageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0602A381E98F03D0087BBD9 /* StorageRequest.swift */; };
-		B0602A431E98F03D0087BBD9 /* StorageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0602A391E98F03D0087BBD9 /* StorageResponse.swift */; };
-		B0602A441E98F03D0087BBD9 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0602A3A1E98F03D0087BBD9 /* Result.swift */; };
-		B0602A451E98F03D0087BBD9 /* NoraError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0602A3B1E98F03D0087BBD9 /* NoraError.swift */; };
+		5D97DDA21F13989200C5926F /* DatabaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D97DD981F13989200C5926F /* DatabaseProvider.swift */; };
+		5D97DDA31F13989200C5926F /* DatabaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D97DD981F13989200C5926F /* DatabaseProvider.swift */; };
+		5D97DDA41F13989200C5926F /* DatabaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D97DD991F13989200C5926F /* DatabaseRequest.swift */; };
+		5D97DDA51F13989200C5926F /* DatabaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D97DD991F13989200C5926F /* DatabaseRequest.swift */; };
+		5D97DDA61F13989200C5926F /* DatabaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D97DD9A1F13989200C5926F /* DatabaseResponse.swift */; };
+		5D97DDA71F13989200C5926F /* DatabaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D97DD9A1F13989200C5926F /* DatabaseResponse.swift */; };
+		5D97DDA81F13989200C5926F /* FirebaseTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D97DD9B1F13989200C5926F /* FirebaseTarget.swift */; };
+		5D97DDA91F13989200C5926F /* FirebaseTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D97DD9B1F13989200C5926F /* FirebaseTarget.swift */; };
+		5D97DDAA1F13989200C5926F /* FirebaseTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D97DD9C1F13989200C5926F /* FirebaseTask.swift */; };
+		5D97DDAB1F13989200C5926F /* FirebaseTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D97DD9C1F13989200C5926F /* FirebaseTask.swift */; };
+		5D97DDAC1F13989200C5926F /* NoraError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D97DD9D1F13989200C5926F /* NoraError.swift */; };
+		5D97DDAD1F13989200C5926F /* NoraError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D97DD9D1F13989200C5926F /* NoraError.swift */; };
+		5D97DDAE1F13989200C5926F /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D97DD9E1F13989200C5926F /* Result.swift */; };
+		5D97DDAF1F13989200C5926F /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D97DD9E1F13989200C5926F /* Result.swift */; };
+		5D97DDB01F13989200C5926F /* StorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D97DD9F1F13989200C5926F /* StorageProvider.swift */; };
+		5D97DDB11F13989200C5926F /* StorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D97DD9F1F13989200C5926F /* StorageProvider.swift */; };
+		5D97DDB21F13989200C5926F /* StorageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D97DDA01F13989200C5926F /* StorageRequest.swift */; };
+		5D97DDB31F13989200C5926F /* StorageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D97DDA01F13989200C5926F /* StorageRequest.swift */; };
+		5D97DDB41F13989200C5926F /* StorageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D97DDA11F13989200C5926F /* StorageResponse.swift */; };
+		5D97DDB51F13989200C5926F /* StorageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D97DDA11F13989200C5926F /* StorageResponse.swift */; };
 		B062C6E01E946B59006C3CB8 /* Nora.h in Headers */ = {isa = PBXBuildFile; fileRef = B062C6D21E946B59006C3CB8 /* Nora.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -41,16 +51,16 @@
 		2A493DF63E18ED29F60987EC /* Pods-NoraTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoraTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NoraTests/Pods-NoraTests.debug.xcconfig"; sourceTree = "<group>"; };
 		47BBF9BAF2B1F6B0AE961F4B /* Pods-NoraTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoraTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NoraTests/Pods-NoraTests.release.xcconfig"; sourceTree = "<group>"; };
 		5C9D2F34406916531BC82016 /* Pods_NoraTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoraTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B0602A321E98F03D0087BBD9 /* DatabaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseProvider.swift; sourceTree = "<group>"; };
-		B0602A331E98F03D0087BBD9 /* StorageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageProvider.swift; sourceTree = "<group>"; };
-		B0602A341E98F03D0087BBD9 /* FirebaseTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseTarget.swift; sourceTree = "<group>"; };
-		B0602A351E98F03D0087BBD9 /* FirebaseTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseTask.swift; sourceTree = "<group>"; };
-		B0602A361E98F03D0087BBD9 /* DatabaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseRequest.swift; sourceTree = "<group>"; };
-		B0602A371E98F03D0087BBD9 /* DatabaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseResponse.swift; sourceTree = "<group>"; };
-		B0602A381E98F03D0087BBD9 /* StorageRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageRequest.swift; sourceTree = "<group>"; };
-		B0602A391E98F03D0087BBD9 /* StorageResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageResponse.swift; sourceTree = "<group>"; };
-		B0602A3A1E98F03D0087BBD9 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		B0602A3B1E98F03D0087BBD9 /* NoraError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoraError.swift; sourceTree = "<group>"; };
+		5D97DD981F13989200C5926F /* DatabaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseProvider.swift; sourceTree = "<group>"; };
+		5D97DD991F13989200C5926F /* DatabaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseRequest.swift; sourceTree = "<group>"; };
+		5D97DD9A1F13989200C5926F /* DatabaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseResponse.swift; sourceTree = "<group>"; };
+		5D97DD9B1F13989200C5926F /* FirebaseTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseTarget.swift; sourceTree = "<group>"; };
+		5D97DD9C1F13989200C5926F /* FirebaseTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseTask.swift; sourceTree = "<group>"; };
+		5D97DD9D1F13989200C5926F /* NoraError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoraError.swift; sourceTree = "<group>"; };
+		5D97DD9E1F13989200C5926F /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		5D97DD9F1F13989200C5926F /* StorageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageProvider.swift; sourceTree = "<group>"; };
+		5D97DDA01F13989200C5926F /* StorageRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageRequest.swift; sourceTree = "<group>"; };
+		5D97DDA11F13989200C5926F /* StorageResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageResponse.swift; sourceTree = "<group>"; };
 		B062C6CF1E946B59006C3CB8 /* Nora.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nora.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B062C6D21E946B59006C3CB8 /* Nora.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nora.h; sourceTree = "<group>"; };
 		B062C6D31E946B59006C3CB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -130,16 +140,16 @@
 		B062C7091E947363006C3CB8 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				B0602A321E98F03D0087BBD9 /* DatabaseProvider.swift */,
-				B0602A331E98F03D0087BBD9 /* StorageProvider.swift */,
-				B0602A341E98F03D0087BBD9 /* FirebaseTarget.swift */,
-				B0602A351E98F03D0087BBD9 /* FirebaseTask.swift */,
-				B0602A361E98F03D0087BBD9 /* DatabaseRequest.swift */,
-				B0602A371E98F03D0087BBD9 /* DatabaseResponse.swift */,
-				B0602A381E98F03D0087BBD9 /* StorageRequest.swift */,
-				B0602A391E98F03D0087BBD9 /* StorageResponse.swift */,
-				B0602A3A1E98F03D0087BBD9 /* Result.swift */,
-				B0602A3B1E98F03D0087BBD9 /* NoraError.swift */,
+				5D97DD981F13989200C5926F /* DatabaseProvider.swift */,
+				5D97DD991F13989200C5926F /* DatabaseRequest.swift */,
+				5D97DD9A1F13989200C5926F /* DatabaseResponse.swift */,
+				5D97DD9B1F13989200C5926F /* FirebaseTarget.swift */,
+				5D97DD9C1F13989200C5926F /* FirebaseTask.swift */,
+				5D97DD9D1F13989200C5926F /* NoraError.swift */,
+				5D97DD9E1F13989200C5926F /* Result.swift */,
+				5D97DD9F1F13989200C5926F /* StorageProvider.swift */,
+				5D97DDA01F13989200C5926F /* StorageRequest.swift */,
+				5D97DDA11F13989200C5926F /* StorageResponse.swift */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -230,7 +240,7 @@
 					};
 					B062C6CE1E946B59006C3CB8 = {
 						CreatedOnToolsVersion = 8.2.1;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -309,6 +319,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				07E554301E96B33C00D81D9B /* NoraTests.swift in Sources */,
+				5D97DDAD1F13989200C5926F /* NoraError.swift in Sources */,
+				5D97DDB51F13989200C5926F /* StorageResponse.swift in Sources */,
+				5D97DDA71F13989200C5926F /* DatabaseResponse.swift in Sources */,
+				5D97DDA91F13989200C5926F /* FirebaseTarget.swift in Sources */,
+				5D97DDB11F13989200C5926F /* StorageProvider.swift in Sources */,
+				5D97DDA31F13989200C5926F /* DatabaseProvider.swift in Sources */,
+				5D97DDA51F13989200C5926F /* DatabaseRequest.swift in Sources */,
+				5D97DDAF1F13989200C5926F /* Result.swift in Sources */,
+				5D97DDAB1F13989200C5926F /* FirebaseTask.swift in Sources */,
+				5D97DDB31F13989200C5926F /* StorageRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,16 +336,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0602A441E98F03D0087BBD9 /* Result.swift in Sources */,
-				B0602A421E98F03D0087BBD9 /* StorageRequest.swift in Sources */,
-				B0602A3D1E98F03D0087BBD9 /* StorageProvider.swift in Sources */,
-				B0602A411E98F03D0087BBD9 /* DatabaseResponse.swift in Sources */,
-				B0602A3F1E98F03D0087BBD9 /* FirebaseTask.swift in Sources */,
-				B0602A431E98F03D0087BBD9 /* StorageResponse.swift in Sources */,
-				B0602A3C1E98F03D0087BBD9 /* DatabaseProvider.swift in Sources */,
-				B0602A3E1E98F03D0087BBD9 /* FirebaseTarget.swift in Sources */,
-				B0602A451E98F03D0087BBD9 /* NoraError.swift in Sources */,
-				B0602A401E98F03D0087BBD9 /* DatabaseRequest.swift in Sources */,
+				5D97DDB01F13989200C5926F /* StorageProvider.swift in Sources */,
+				5D97DDB21F13989200C5926F /* StorageRequest.swift in Sources */,
+				5D97DDA41F13989200C5926F /* DatabaseRequest.swift in Sources */,
+				5D97DDA61F13989200C5926F /* DatabaseResponse.swift in Sources */,
+				5D97DDAA1F13989200C5926F /* FirebaseTask.swift in Sources */,
+				5D97DDA21F13989200C5926F /* DatabaseProvider.swift in Sources */,
+				5D97DDB41F13989200C5926F /* StorageResponse.swift in Sources */,
+				5D97DDAE1F13989200C5926F /* Result.swift in Sources */,
+				5D97DDAC1F13989200C5926F /* NoraError.swift in Sources */,
+				5D97DDA81F13989200C5926F /* FirebaseTarget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

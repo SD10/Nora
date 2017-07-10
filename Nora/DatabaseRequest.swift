@@ -13,9 +13,9 @@ import FirebaseDatabase
 
 struct DatabaseRequest {
     
-    var reference: FIRDatabaseReference
-    var task: DatabaseTask
-    var transactionBlock: (FIRMutableData) -> FIRTransactionResult
+    var reference: DatabaseReference
+    var task: NRDatabaseTask
+    var transactionBlock: (MutableData) -> TransactionResult
     var onDisconnect: Bool
     var localEvents: Bool
     
@@ -36,8 +36,8 @@ extension DatabaseRequest {
 
 struct DatabaseQueryRequest {
     
-    var query: FIRDatabaseQuery
-    var task: DatabaseTask
+    var query: DatabaseQuery
+    var task: NRDatabaseTask
     
 }
 

@@ -13,8 +13,8 @@ import FirebaseStorage
 
 struct StorageRequest {
     
-    let reference: FIRStorageReference
-    let task: StorageTask
+    let reference: StorageReference
+    let task: NRStorageTask
     
 }
 

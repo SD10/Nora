@@ -14,7 +14,7 @@ import FirebaseStorage
 public struct StorageResponse {
     
     let data: Data?
-    let metaData: FIRStorageMetadata?
+    let metaData: StorageMetadata?
     let url: URL?
 }
 
@@ -33,7 +33,7 @@ public extension StorageResponse {
         self.data = nil
     }
     
-    init(metaData: FIRStorageMetadata) {
+    init(metaData: StorageMetadata) {
         self.metaData = metaData
         self.url = nil
         self.data = nil

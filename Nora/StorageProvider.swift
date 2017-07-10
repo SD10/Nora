@@ -14,7 +14,7 @@ public typealias StorageCompletion = (Result<StorageResponse>) -> Void
 public class StorageProvider<Target: StorageTarget> {
     
     @discardableResult
-    public func request(_ target: Target, completion: @escaping StorageCompletion) -> FIRStorageObservableTask? {
+    public func request(_ target: Target, completion: @escaping StorageCompletion) -> StorageObservableTask? {
         
         let request = StorageRequest(target)
         
@@ -26,9 +26,9 @@ public class StorageProvider<Target: StorageTarget> {
         }
     }
     
-    private func processUpload(_ request: StorageRequest, _ completion: @escaping StorageCompletion) -> FIRStorageUploadTask? {
+    private func processUpload(_ request: StorageRequest, _ completion: @escaping StorageCompletion) -> StorageUploadTask? {
         
-        let writeBlock = { (metaData: FIRStorageMetadata?, error: Error?) in
+        let writeBlock = { (metaData: StorageMetadata?, error: Error?) in
             let response = self.convertResponseToResult(data: nil, metaData: metaData, url: nil, error: error)
             completion(response)
         }
@@ -38,17 +38,17 @@ public class StorageProvider<Target: StorageTarget> {
             completion(response)
         }
         
-        var uploadTask: FIRStorageUploadTask?
+        var uploadTask: StorageUploadTask?
         
         switch request.task {
         case .upload(let data, let metaData):
-            uploadTask = request.reference.put(data, metadata: metaData, completion: writeBlock)
+            uploadTask = request.reference.putData(data, metadata: metaData, completion: writeBlock)
         case .uploadFile(let url, let metaData):
-            uploadTask = request.reference.putFile(url, metadata: metaData, completion: writeBlock)
+            uploadTask = request.reference.putFile(from: url, metadata: metaData, completion: writeBlock)
         case .update(let metadata):
-            request.reference.update(metadata, completion: writeBlock)
+            request.reference.updateMetadata(metadata, completion: writeBlock)
         case .downloadMetadata: // this is really a download task
-            request.reference.metadata(completion: writeBlock)
+            request.reference.getMetadata(completion: writeBlock)
         case .delete:
             request.reference.delete(completion: deleteBlock)
         default:
@@ -58,7 +58,7 @@ public class StorageProvider<Target: StorageTarget> {
         return uploadTask
     }
     
-    private func processDownload(_ request: StorageRequest, _ completion: @escaping StorageCompletion) -> FIRStorageDownloadTask? {
+    private func processDownload(_ request: StorageRequest, _ completion: @escaping StorageCompletion) -> StorageDownloadTask? {
         
         let dataCompletion = { (data: Data?, error: Error?) in
             let response = self.convertResponseToResult(data: data, metaData: nil, url: nil, error: error)
@@ -70,11 +70,11 @@ public class StorageProvider<Target: StorageTarget> {
             completion(response)
         }
         
-        var downloadTask: FIRStorageDownloadTask?
+        var downloadTask: StorageDownloadTask?
         
         switch request.task {
         case .downloadData(let maxSize):
-            downloadTask = request.reference.data(withMaxSize: maxSize, completion: dataCompletion)
+            downloadTask = request.reference.getData(maxSize: maxSize, completion: dataCompletion)
         case .downloadToURL(let url):
             downloadTask = request.reference.write(toFile: url, completion: urlCompletion)
         case .downloadURL:
@@ -89,7 +89,7 @@ public class StorageProvider<Target: StorageTarget> {
 
 private extension StorageProvider {
 
-    func convertResponseToResult(data: Data?, metaData: FIRStorageMetadata?, url: URL?, error: Error?) -> Result<StorageResponse> {
+    func convertResponseToResult(data: Data?, metaData: StorageMetadata?, url: URL?, error: Error?) -> Result<StorageResponse> {
         
         switch (data, metaData, url, error) {
         case let (.some(data), _, _, .none):
