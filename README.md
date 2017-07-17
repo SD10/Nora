@@ -77,9 +77,9 @@ Download Nora's dependencies using CocoaPods. Add them to your podfile
 
 ```rb
 
-pod 'FirebaseDatabase', '~>3.1.1'
+pod 'FirebaseDatabase', '~>4.0.0'
 
-pod 'FirebaseStorage', '~>1.0.5'
+pod 'FirebaseStorage', '~>2.0.0'
 
 ```
 
