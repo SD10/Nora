@@ -21,6 +21,14 @@ N/A
 
 ---
 
+### [1.0.0]()
+
+### API Breaking Changes
+- Updated to FirebaseDatabase `4.0.0` and FirebaseStorage `2.0.0`.
+- All Nora types are now prefixed with `NR` to prevent Firebase 3 naming collisions. [#25](https://github.com/SD10/Nora/pull/25) by [@SD10](https://github.com/SD10)
+
+---
+
 ### [0.1.1](https://github.com/SD10/Nora/releases/tag/0.1.0)
 
 ### Bugfixes
