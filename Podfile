@@ -6,8 +6,8 @@ target 'Nora' do
   use_frameworks!
 
   # Pods for Nora
-  pod 'FirebaseDatabase', '~>3.1.1'
-  pod 'FirebaseStorage', '~>1.0.5'
+  pod 'FirebaseDatabase'
+  pod 'FirebaseStorage'
 
   target 'NoraTests' do
     inherit! :search_paths
