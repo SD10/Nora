@@ -13,14 +13,14 @@ The `DatabaseTarget` protocol requires you to implement 3 properties:
 
 ```swift
 
-enum Users: DatabaseTarget {
+enum Users: NRDatabaseTarget {
 	
 	case getUser(id: String)
 	case createUser(email: String, name: String)
 	case deleteUser(id: String)
 
 	var baseReference: FIRDatabaseReference {
-		return FIRDatabase.database().reference().child("users")
+		return Database.database().reference().child("users")
 	}
 
 	var path: String {
@@ -34,7 +34,7 @@ enum Users: DatabaseTarget {
 
 	}
 
-	var task: DatabaseTask {
+	var task: NRDatabaseTask {
 
 		switch self {
 		case .getUser:
