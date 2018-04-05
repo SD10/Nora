@@ -1,6 +1,0 @@
-framework module Pods_Nora {
-  umbrella header "Pods-Nora-umbrella.h"
-
-  export *
-  module * { export * }
-}
