@@ -12,11 +12,11 @@
               alt="Build Status">
      </a>
      <a href="https://swift.org">
-       <img src="https://img.shields.io/badge/Swift-3.1-orange.svg"
+       <img src="https://img.shields.io/badge/Swift-4.1-orange.svg"
             alt="Swift" />
      </a>
      <a href="https://developer.apple.com/xcode">
-         <img src="https://img.shields.io/badge/Xcode-8.3-blue.svg"
+         <img src="https://img.shields.io/badge/Xcode-9.3-blue.svg"
               alt="Xcode">
      </a>
      <a href="https://opensource.org/licenses/MIT">
@@ -47,45 +47,11 @@ Simply put, working with Firebase just got whole lot easier.
 
 ## Installation
 
-Firebase is currently shipped as a static framework - which prevents Nora from having CocoaPods support.
-
-Don't fret though! This just means the installation process is even simpler!
-
-You just have to download Nora, drag the `Sources` folder into your project, and download the dependencies.
-
----
-
-### Step 1
-
-Click Download Zip to download the Nora project
-
-![Step 1](https://github.com/SD10/Nora/blob/master/Screenshots/Screen%20Shot%202017-04-05%20at%204.07.48%20AM.png)
-
----
-
-### Step 2
-
-Open the Nora.xcodeproj project and drag the `Sources` folder into your App
-
-![Step 2](https://github.com/SD10/Nora/blob/master/Screenshots/Screen%20Shot%202017-04-05%20at%204.10.29%20AM.png)
-
----
-
-### Step 3
-
-Download Nora's dependencies using CocoaPods. Add them to your podfile
+### [CocoaPods](https://cocoapods.org) Recommended
 
 ```rb
-
-pod 'FirebaseDatabase', '~>4.0.0'
-
-pod 'FirebaseStorage', '~>2.0.0'
-
+  pod 'Nora'
 ```
-
-Then run `pod install`
-
----
 
 ## Example
 
