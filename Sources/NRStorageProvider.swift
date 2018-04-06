@@ -8,8 +8,9 @@
 
 import Foundation
 import FirebaseStorage
+import Result
 
-public typealias StorageCompletion = (Result<NRStorageResponse>) -> Void
+public typealias StorageCompletion = (Result<NRStorageResponse, NRError>) -> Void
 
 public class NRStorageProvider<Target: NRStorageTarget> {
     
@@ -89,7 +90,7 @@ public class NRStorageProvider<Target: NRStorageTarget> {
 
 private extension NRStorageProvider {
 
-    func convertResponseToResult(data: Data?, metaData: StorageMetadata?, url: URL?, error: Error?) -> Result<NRStorageResponse> {
+    func convertResponseToResult(data: Data?, metaData: StorageMetadata?, url: URL?, error: Error?) -> Result<NRStorageResponse, NRError> {
         
         switch (data, metaData, url, error) {
         case let (.some(data), _, _, .none):

@@ -14,7 +14,6 @@
 		1F9861102076EB8900EB6CAE /* NRFirebaseTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9861062076EB8800EB6CAE /* NRFirebaseTarget.swift */; };
 		1F9861112076EB8900EB6CAE /* NRStorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9861072076EB8800EB6CAE /* NRStorageProvider.swift */; };
 		1F9861122076EB8900EB6CAE /* NRDatabaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9861082076EB8900EB6CAE /* NRDatabaseProvider.swift */; };
-		1F9861132076EB8900EB6CAE /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9861092076EB8900EB6CAE /* Result.swift */; };
 		1F9861142076EB8900EB6CAE /* NRFirebaseTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98610A2076EB8900EB6CAE /* NRFirebaseTask.swift */; };
 		1F9861152076EB8900EB6CAE /* NRDatabaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98610B2076EB8900EB6CAE /* NRDatabaseRequest.swift */; };
 		1F9861162076EB8900EB6CAE /* NRError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98610C2076EB8900EB6CAE /* NRError.swift */; };
@@ -31,7 +30,6 @@
 		1F9861062076EB8800EB6CAE /* NRFirebaseTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRFirebaseTarget.swift; sourceTree = "<group>"; };
 		1F9861072076EB8800EB6CAE /* NRStorageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRStorageProvider.swift; sourceTree = "<group>"; };
 		1F9861082076EB8900EB6CAE /* NRDatabaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRDatabaseProvider.swift; sourceTree = "<group>"; };
-		1F9861092076EB8900EB6CAE /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		1F98610A2076EB8900EB6CAE /* NRFirebaseTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRFirebaseTask.swift; sourceTree = "<group>"; };
 		1F98610B2076EB8900EB6CAE /* NRDatabaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRDatabaseRequest.swift; sourceTree = "<group>"; };
 		1F98610C2076EB8900EB6CAE /* NRError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRError.swift; sourceTree = "<group>"; };
@@ -82,7 +80,6 @@
 				1F9861072076EB8800EB6CAE /* NRStorageProvider.swift */,
 				1F9861032076EB8800EB6CAE /* NRStorageRequest.swift */,
 				1F9861042076EB8800EB6CAE /* NRStorageResponse.swift */,
-				1F9861092076EB8900EB6CAE /* Result.swift */,
 				1F9860FB2076EB7D00EB6CAE /* Nora.h */,
 				1F9860FC2076EB7D00EB6CAE /* Info.plist */,
 			);
@@ -214,7 +211,6 @@
 				1F9861162076EB8900EB6CAE /* NRError.swift in Sources */,
 				1F9861142076EB8900EB6CAE /* NRFirebaseTask.swift in Sources */,
 				1F98610F2076EB8900EB6CAE /* NRDatabaseResponse.swift in Sources */,
-				1F9861132076EB8900EB6CAE /* Result.swift in Sources */,
 				1F98610D2076EB8900EB6CAE /* NRStorageRequest.swift in Sources */,
 				1F9861122076EB8900EB6CAE /* NRDatabaseProvider.swift in Sources */,
 			);

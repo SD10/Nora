@@ -8,8 +8,9 @@
 
 import Foundation
 import FirebaseDatabase
+import Result
 
-public typealias DatabaseCompletion = (Result<NRDatabaseResponse>) -> Void
+public typealias DatabaseCompletion = (Result<NRDatabaseResponse, NRError>) -> Void
 public typealias TransactionBlock = (MutableData) -> TransactionResult
 
 public class NRDatabaseProvider<Target: NRDatabaseTarget> {
@@ -113,7 +114,7 @@ public class NRDatabaseProvider<Target: NRDatabaseTarget> {
 
 private extension NRDatabaseProvider {
 
-    func convertResponseToResult(snapshot: DataSnapshot?, reference: DatabaseReference?, error: Error?, committed: Bool? = nil) -> Result<NRDatabaseResponse> {
+    func convertResponseToResult(snapshot: DataSnapshot?, reference: DatabaseReference?, error: Error?, committed: Bool? = nil) -> Result<NRDatabaseResponse, NRError> {
         
         switch (snapshot, reference, error, committed) {
         case let (snapshot, .some(reference), .none, .some(committed)):

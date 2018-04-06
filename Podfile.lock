@@ -35,10 +35,12 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - Result (3.2.4)
 
 DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
+  - Result
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs:
@@ -52,6 +54,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
+    - Result
 
 SPEC CHECKSUMS:
   Firebase: cc13dfab1038c8b45d7903e01fc690451d6d0b24
@@ -64,7 +67,8 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 390ea358e5a0d0133153806f744662dad933d06b
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
 
-PODFILE CHECKSUM: d060f63ab677e73c313a13a583f4ab015424b23d
+PODFILE CHECKSUM: c1a313749f5b8318c50f13a33eb24ed071a3b34a
 
 COCOAPODS: 1.5.0
