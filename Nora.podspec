@@ -12,8 +12,8 @@ Pod::Spec.new do |s|
   s.swift_version    = '4.1'
   s.static_framework = true
   s.requires_arc     = true
-  s.dependency "Firebase/Core", "~> 4.0"
-  s.dependency "Firebase/Database", "~> 4.0"
-  s.dependency "Firebase/Storage", "~> 4.0"
+  s.dependency "Firebase/Core"
+  s.dependency "Firebase/Database"
+  s.dependency "Firebase/Storage"
   s.dependency "Result", "~> 3.0"
 end
