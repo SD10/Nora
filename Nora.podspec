@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Nora'
-  s.version          = '1.1.0'
+  s.version          = '1.1.1'
   s.summary          = 'An abstraction layer for FirebaseDatabase and FirebaseStorage.'
   s.homepage         = 'https://github.com/SD10/Nora'
   s.license          = { :type => 'MIT', :file => 'LICENSE.md' }
