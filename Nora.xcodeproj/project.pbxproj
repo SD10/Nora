@@ -18,6 +18,7 @@
 		1F9861142076EB8900EB6CAE /* NRFirebaseTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98610A2076EB8900EB6CAE /* NRFirebaseTask.swift */; };
 		1F9861152076EB8900EB6CAE /* NRDatabaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98610B2076EB8900EB6CAE /* NRDatabaseRequest.swift */; };
 		1F9861162076EB8900EB6CAE /* NRError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98610C2076EB8900EB6CAE /* NRError.swift */; };
+		A07D0FAFBE859B650D8F342E /* Pods_Nora.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE2BA8F9370352D1B2619345 /* Pods_Nora.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,9 @@
 		1F98610A2076EB8900EB6CAE /* NRFirebaseTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRFirebaseTask.swift; sourceTree = "<group>"; };
 		1F98610B2076EB8900EB6CAE /* NRDatabaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRDatabaseRequest.swift; sourceTree = "<group>"; };
 		1F98610C2076EB8900EB6CAE /* NRError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRError.swift; sourceTree = "<group>"; };
+		AF8737A9720B68957699E4C7 /* Pods-Nora.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nora.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nora/Pods-Nora.debug.xcconfig"; sourceTree = "<group>"; };
+		DADC44E02F5A056F06492558 /* Pods-Nora.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nora.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nora/Pods-Nora.release.xcconfig"; sourceTree = "<group>"; };
+		EE2BA8F9370352D1B2619345 /* Pods_Nora.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nora.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A07D0FAFBE859B650D8F342E /* Pods_Nora.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +57,8 @@
 			children = (
 				1F9860FA2076EB7D00EB6CAE /* Sources */,
 				1F9860F92076EB7D00EB6CAE /* Products */,
+				EA7B3339399A9FC9B5E0C9DB /* Pods */,
+				E2F60F89F7C0738BCEF3361D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +89,23 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
+		E2F60F89F7C0738BCEF3361D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE2BA8F9370352D1B2619345 /* Pods_Nora.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA7B3339399A9FC9B5E0C9DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF8737A9720B68957699E4C7 /* Pods-Nora.debug.xcconfig */,
+				DADC44E02F5A056F06492558 /* Pods-Nora.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -100,6 +124,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F9861002076EB7D00EB6CAE /* Build configuration list for PBXNativeTarget "Nora" */;
 			buildPhases = (
+				883B09E10F5F9494EFD1A154 /* [CP] Check Pods Manifest.lock */,
 				1F9860F32076EB7D00EB6CAE /* Sources */,
 				1F9860F42076EB7D00EB6CAE /* Frameworks */,
 				1F9860F52076EB7D00EB6CAE /* Headers */,
@@ -155,6 +180,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		883B09E10F5F9494EFD1A154 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nora-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1F9860F32076EB7D00EB6CAE /* Sources */ = {
@@ -299,6 +345,7 @@
 		};
 		1F9861012076EB7D00EB6CAE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF8737A9720B68957699E4C7 /* Pods-Nora.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -307,7 +354,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Nora/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -325,6 +372,7 @@
 		};
 		1F9861022076EB7D00EB6CAE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DADC44E02F5A056F06492558 /* Pods-Nora.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -333,7 +381,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Nora/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
