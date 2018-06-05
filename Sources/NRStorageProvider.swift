@@ -14,6 +14,9 @@ public typealias StorageCompletion = (Result<NRStorageResponse, NRError>) -> Voi
 
 public class NRStorageProvider<Target: NRStorageTarget> {
     
+    /// Default init
+    public init() {}
+    
     @discardableResult
     public func request(_ target: Target, completion: @escaping StorageCompletion) -> StorageObservableTask? {
         
