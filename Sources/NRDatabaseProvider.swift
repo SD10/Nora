@@ -13,8 +13,8 @@ import Result
 public typealias DatabaseCompletion = (Result<NRDatabaseResponse, NRError>) -> Void
 public typealias TransactionBlock = (MutableData) -> TransactionResult
 
-public class NRDatabaseProvider<Target: NRDatabaseTarget>: NSObject {
-
+public class NRDatabaseProvider<Target: NRDatabaseTarget> {
+  
     /// Make a request to FirebaseDatabase
     /// - Parameter target: target for the request
     /// - Parameter completion: completion block with result of the request
