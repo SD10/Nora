@@ -13,9 +13,9 @@ import FirebaseStorage
 
 public struct NRStorageResponse {
     
-    let data: Data?
-    let metaData: StorageMetadata?
-    let url: URL?
+    public let data: Data?
+    public let metaData: StorageMetadata?
+    public let url: URL?
 }
 
 
